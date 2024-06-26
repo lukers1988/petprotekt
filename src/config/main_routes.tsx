@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Auth from "../component/auth/Auth";
-import Login from "../component/auth/Login";
-import Register from "../component/auth/Register";
-import Main from "../component/Main";
+import Auth from "@appComponents/auth/Auth";
+import Login from "@appComponents/auth/Login";
+import Register from "@appComponents/auth/Register";
+import Main from "@appComponents/Main";
 
 
 const MainRoutes = () => (
