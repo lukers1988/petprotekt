@@ -3,6 +3,7 @@ import Auth from "@appComponents/auth/Auth";
 import Login from "@appComponents/auth/Login";
 import Register from "@appComponents/auth/Register";
 import Main from "@appComponents/Main";
+import Callback from "@appComponents/auth/Callback";
 
 
 const MainRoutes = () => (
@@ -12,6 +13,7 @@ const MainRoutes = () => (
             <Route path="auth" element={<Auth />}>
                 <Route path="login" element={<Login />}/>
                 <Route path="register" element={<Register />} />
+                <Route path="callback" element={<Callback />} />
             </Route>
         </Routes>
     </Router>

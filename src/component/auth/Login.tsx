@@ -9,6 +9,7 @@ import { Password } from "primereact/password";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 import { Divider } from "primereact/divider";
+import customAxios from "@appConfig/customAxios";
 
 const Login = () => {
     const [user, setUser] = useState<string>('');
@@ -21,16 +22,19 @@ const Login = () => {
       dispatch(loginStart());
 
       try {
-        const provider = new GoogleAuthProvider();
-
-        provider.setCustomParameters({
-          prompt: 'select_account',
+        customAxios.get('/auth/login/google').then((response: any) => {
+          window.location.href = response.data.google_url;
         });
+        // const provider = new GoogleAuthProvider();
 
-        const userCredentials = await signInWithPopup(auth, provider);
+        // provider.setCustomParameters({
+        //   prompt: 'select_account',
+        // });
 
-        dispatch(loginSuccess(userCredentials.user));
-        navigate('/');
+        // const userCredentials = await signInWithPopup(auth, provider);
+
+        // dispatch(loginSuccess(userCredentials.user));
+        // navigate('/');
 
       } catch (error: any) {
         console.log(error.message);
