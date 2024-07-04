@@ -8,6 +8,8 @@ import 'primereact/resources/primereact.min.css';         // Import PrimeReact C
 import 'primeicons/primeicons.css';     
 import 'primeflex/primeflex.css';
 import store from '@appStore/store.ts';
+import './style.css';
+import './i18n.js'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
