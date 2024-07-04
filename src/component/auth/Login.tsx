@@ -1,7 +1,7 @@
 import { auth } from '@appConfig/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
 import customAxios from '@appConfig/customAxios';

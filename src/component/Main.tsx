@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
     const loggedInUser = useSelector((state: any) => state.user.user);
-    const dispatch = useDispatch();
 
     return (
         <div className="dashboard">
