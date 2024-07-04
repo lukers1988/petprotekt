@@ -11,7 +11,8 @@ export default defineConfig({
     alias: {
       '@appComponents': path.resolve(__dirname, './src/component'),
       '@appConfig': path.resolve(__dirname, './src/config'),
-      '@appStore': path.resolve(__dirname, './src/store')
+      '@appStore': path.resolve(__dirname, './src/store'),
+      '@appImages': path.resolve(__dirname, './src/images')
     }
   },
   server: {

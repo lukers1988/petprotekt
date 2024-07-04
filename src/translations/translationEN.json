@@ -1,0 +1,9 @@
+{
+    "auth": {
+        "noAccount": "Don't have an account?",
+        "signUp": "Register",
+        "email": "Email",
+        "password": "Password",
+        "signIn": "Sign In"
+    }
+}
