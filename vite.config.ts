@@ -1,21 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react()
-  ],
-  resolve: {
-    alias: {
-      '@appComponents': path.resolve(__dirname, './src/component'),
-      '@appConfig': path.resolve(__dirname, './src/config'),
-      '@appStore': path.resolve(__dirname, './src/store'),
-      '@appImages': path.resolve(__dirname, './src/images')
+    plugins: [react()],
+    resolve: {
+        alias: {
+            '@appComponents': path.resolve(__dirname, './src/component'),
+            '@appConfig': path.resolve(__dirname, './src/config'),
+            '@appStore': path.resolve(__dirname, './src/store'),
+            '@appImages': path.resolve(__dirname, './src/images'),
+            '@appInterfaces': path.resolve(__dirname, './src/interfaces')
+        }
+    },
+    server: {
+        port: 3000
     }
-  },
-  server: {
-    port: 3000
-  }
-})
+});

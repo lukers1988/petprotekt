@@ -5,5 +5,15 @@
         "email": "Email",
         "password": "Password",
         "signIn": "Sign In"
+    },
+    "errors": {
+        "defaultError": "Something went wrong, try again later.",
+        "emailRequired": "Email address is required",
+        "passwordRequired": "Password is required",
+        "emailMissing@": "Make sure your email address contains \"@\" sign",
+        "incompleteEmail": "Email address is incomplete"
+    },
+    "notifications": {
+        "signInNotificationHeader": "Sign In"
     }
 }

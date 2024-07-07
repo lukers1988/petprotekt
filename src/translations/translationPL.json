@@ -5,5 +5,15 @@
         "email": "Email",
         "password": "Hasło",
         "signIn": "Zaloguj się"
+    },
+    "errors": {
+        "defaultError": "Coś poszło nie tak, spróbuj ponownie później.",
+        "emailRequired": "Adres email jest wymagany",
+        "passwordRequired": "Hasło jest wymagane",
+        "emailMissing@": "Uwzględnij znak \"@\" w adresie email",
+        "incompleteEmail": "Adres email jest niepełny"
+    },
+    "notifications": {
+        "signInNotificationHeader": "Logowanie"
     }
 }

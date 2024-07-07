@@ -1,23 +1,32 @@
 import { auth } from '@appConfig/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
+import { showNotificationWithDuration } from '@appStore/NotificationReducer';
 import customAxios from '@appConfig/customAxios';
 import TextInput from '@appComponents/inputs/TextInput';
-import DogIcon from './../../images/dog.svg';
-import GoogleLoginIcon from './../../images/google-login.svg';
-import FacebookLoginIcon from './../../images/facebook-login.svg';
-import i18next from 'i18next';
+import DogIcon from '@appImages/dog.svg';
+import GoogleLoginIcon from '@appImages/google-login.svg';
+import FacebookLoginIcon from '@appImages/facebook-login.svg';
+import { useTranslation } from 'react-i18next';
+import { includes, startsWith, endsWith, values } from 'ramda';
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
-    const t = i18next.t;
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [errors, setErrors] = useState<{
+        email: string | undefined;
+        password: string | undefined;
+    }>({ email: undefined, password: undefined });
+
+    const user = useSelector((state: any) => state.user);
 
     const handleGoogleLogin = async (): Promise<void> => {
         dispatch(loginStart());
@@ -29,24 +38,22 @@ const Login = () => {
         } catch (error: any) {
             console.error(error.message);
             dispatch(loginFailure(error.message));
+            showNotificationWithDuration({
+                headerText: t('notifications:signInNotificationHeader'),
+                notificationKind: 'danger',
+                duration: 3000
+            })(dispatch);
         }
     };
 
     const handleFacebookLogin = async (): Promise<void> => {
         console.info('NYI');
-        // dispatch(loginStart());
-
-        // try {
-        //     customAxios.get('/auth/login/google').then((response: any) => {
-        //         window.location.href = response.data.google_url;
-        //     });
-        // } catch (error: any) {
-        //     console.log(error.message);
-        //     dispatch(loginFailure(error.message));
-        // }
     };
 
     const handleLogin = async (): Promise<void> => {
+        const formComplete = verifyFormCompletion();
+        if (!formComplete || user.status === 'loading') return;
+
         dispatch(loginStart());
 
         try {
@@ -57,8 +64,38 @@ const Login = () => {
         } catch (error: any) {
             console.log(error.message);
             dispatch(loginFailure(error.message));
+            showNotificationWithDuration({
+                headerText: t('notifications:signInNotificationHeader'),
+                notificationKind: 'danger',
+                duration: 3000
+            })(dispatch);
         }
     };
+
+    const verifyFormCompletion = () => {
+        const errorsAfterVerification = {
+            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(),
+            password: password === '' ? t('errors:passwordRequired') : undefined
+        };
+
+        setErrors(errorsAfterVerification);
+
+        return !(values(errorsAfterVerification).filter((value) => value !== undefined).length > 0);
+    };
+
+    const verifyEmailCompletion = () => {
+        if (email && !includes('@', email)) {
+            return t('errors:emailMissing@');
+        } else if (startsWith('@', email) || endsWith('@', email)) {
+            return t('errors:incompleteEmail');
+        } else {
+            return undefined;
+        }
+    };
+
+    useEffect(() => {
+        setErrors({ email: undefined, password: undefined });
+    }, [email, password]);
 
     return (
         <div className="w-full h-screen">
@@ -95,12 +132,20 @@ const Login = () => {
                         value={email}
                         valueSetter={setEmail}
                         type="email"
+                        error={errors.email}
+                        onBlur={() => {
+                            setErrors((currentValue) => ({
+                                ...currentValue,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
                     />
                     <TextInput
                         label={t('auth:password')}
                         value={password}
                         valueSetter={setPassword}
                         type="password"
+                        error={errors.password}
                     />
                     <div className="d-flex justify-content-center text-center mt-4 pt-1 gap-4">
                         <img
@@ -120,7 +165,11 @@ const Login = () => {
                             className="btn btn-primary btn-block"
                             onClick={() => handleLogin()}
                         >
-                            {t('auth:signIn')}
+                            {user.status === 'loading' ? (
+                                <Spinner animation="border" size="sm" />
+                            ) : (
+                                t('auth:signIn')
+                            )}
                         </button>
                         <div className="new-account mt-2">
                             <p className="mb-0">
