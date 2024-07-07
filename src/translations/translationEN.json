@@ -1,17 +1,21 @@
 {
     "auth": {
         "noAccount": "Don't have an account?",
+        "alreadyHaveAccount": "Already have an account?",
         "signUp": "Register",
         "email": "Email",
         "password": "Password",
-        "signIn": "Sign In"
+        "signIn": "Sign In",
+        "repeatPassword": "Repeat password"
     },
     "errors": {
         "defaultError": "Something went wrong, try again later.",
         "emailRequired": "Email address is required",
         "passwordRequired": "Password is required",
         "emailMissing@": "Make sure your email address contains \"@\" sign",
-        "incompleteEmail": "Email address is incomplete"
+        "incompleteEmail": "Email address is incomplete",
+        "shortPassword": "Password must consist of at least eight characters",
+        "passwordsMatch": "Passwords must match"
     },
     "notifications": {
         "signInNotificationHeader": "Sign In"

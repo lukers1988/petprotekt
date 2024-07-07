@@ -1,17 +1,21 @@
 {
     "auth": {
         "noAccount": "Nie posiadasz jeszcze konta?",
+        "alreadyHaveAccount": "Posiadasz już konto?",
         "signUp": "Zarejestruj się",
         "email": "Email",
         "password": "Hasło",
-        "signIn": "Zaloguj się"
+        "signIn": "Zaloguj się",
+        "repeatPassword": "Powtórz hasło"
     },
     "errors": {
         "defaultError": "Coś poszło nie tak, spróbuj ponownie później.",
         "emailRequired": "Adres email jest wymagany",
         "passwordRequired": "Hasło jest wymagane",
         "emailMissing@": "Uwzględnij znak \"@\" w adresie email",
-        "incompleteEmail": "Adres email jest niepełny"
+        "incompleteEmail": "Adres email jest niepełny",
+        "shortPassword": "Hasło musi zawierać conajmniej osiem znaków",
+        "passwordsMatch": "Hasła muszą być takie same"
     },
     "notifications": {
         "signInNotificationHeader": "Logowanie"

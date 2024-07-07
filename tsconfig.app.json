@@ -28,7 +28,8 @@
       "@appConfig/*": ["config/*"],
       "@appStore/*": ["store/*"],
       "@appImages/*": ["images/*"],
-      "@appInterfaces/*": ["interfaces/*"]
+      "@appInterfaces/*": ["interfaces/*"],
+      "@appConst/*": ["const/*"]
     }
   },
   "include": ["src"]
