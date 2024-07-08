@@ -196,16 +196,10 @@ const Register = () => {
                         value={firstName}
                         valueSetter={setFirstName}
                         error={errors.firstName}
-                        onBlur={(value) => {
-                            setErrors((currentValue) => ({
-                                ...currentValue,
-                                email: verifyEmailCompletion(value)
-                            }));
-                        }}
-                        onChangeEffect={(value) => {
+                        onChangeEffect={() => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion(value)
+                                firstName: undefined
                             }));
                         }}
                     />
@@ -215,16 +209,10 @@ const Register = () => {
                         valueSetter={setLastName}
                         type="email"
                         error={errors.lastName}
-                        onBlur={(value) => {
-                            setErrors((currentValue) => ({
-                                ...currentValue,
-                                email: verifyEmailCompletion(value)
-                            }));
-                        }}
-                        onChangeEffect={(value) => {
+                        onChangeEffect={() => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion(value)
+                                lastName: undefined
                             }));
                         }}
                     />
