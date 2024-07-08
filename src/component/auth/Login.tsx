@@ -93,10 +93,6 @@ const Login = () => {
         }
     };
 
-    useEffect(() => {
-        setErrors({ email: undefined, password: undefined });
-    }, [email, password]);
-
     return (
         <div className="w-full h-screen">
             <div
@@ -139,6 +135,12 @@ const Login = () => {
                                 email: verifyEmailCompletion()
                             }));
                         }}
+                        onChangeEffect={() => {
+                            setErrors((currentVal) => ({
+                                ...currentVal,
+                                email: undefined
+                            }));
+                        }}
                     />
                     <TextInput
                         label={t('auth:password')}
@@ -146,6 +148,12 @@ const Login = () => {
                         valueSetter={setPassword}
                         type="password"
                         error={errors.password}
+                        onChangeEffect={() => {
+                            setErrors((currentVal) => ({
+                                ...currentVal,
+                                password: undefined
+                            }));
+                        }}
                     />
                     <div className="d-flex justify-content-center text-center mt-4 pt-1 gap-4">
                         <img
