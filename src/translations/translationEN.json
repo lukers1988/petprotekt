@@ -6,7 +6,9 @@
         "email": "Email",
         "password": "Password",
         "signIn": "Sign In",
-        "repeatPassword": "Repeat password"
+        "repeatPassword": "Repeat password",
+        "firstName": "First name",
+        "lastName": "Last name"
     },
     "errors": {
         "defaultError": "Something went wrong, try again later.",
@@ -15,9 +17,12 @@
         "emailMissing@": "Make sure your email address contains \"@\" sign",
         "incompleteEmail": "Email address is incomplete",
         "shortPassword": "Password must consist of at least eight characters",
-        "passwordsMatch": "Passwords must match"
+        "passwordsMatch": "Passwords must match",
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required"
     },
     "notifications": {
-        "signInNotificationHeader": "Sign In"
+        "signInNotificationHeader": "Sign In",
+        "signUpNotificationHeader": "Registration"
     }
 }

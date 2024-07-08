@@ -6,7 +6,9 @@
         "email": "Email",
         "password": "Hasło",
         "signIn": "Zaloguj się",
-        "repeatPassword": "Powtórz hasło"
+        "repeatPassword": "Powtórz hasło",
+        "firstName": "Imię",
+        "lastName": "Nazwisko"
     },
     "errors": {
         "defaultError": "Coś poszło nie tak, spróbuj ponownie później.",
@@ -15,9 +17,12 @@
         "emailMissing@": "Uwzględnij znak \"@\" w adresie email",
         "incompleteEmail": "Adres email jest niepełny",
         "shortPassword": "Hasło musi zawierać conajmniej osiem znaków",
-        "passwordsMatch": "Hasła muszą być takie same"
+        "passwordsMatch": "Hasła muszą być takie same",
+        "firstNameRequired": "Imię jest wymagane",
+        "lastNameRequired": "Nazwisko jest wymagane"
     },
     "notifications": {
-        "signInNotificationHeader": "Logowanie"
+        "signInNotificationHeader": "Logowanie",
+        "signUpNotificationHeader": "Rejestracja"
     }
 }
