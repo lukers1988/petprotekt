@@ -7,6 +7,7 @@ interface textInputInterface {
     type?: string;
     error?: string;
     onBlur?: () => void;
+    onChangeEffect?: (e: HTMLInputElement['value']) => void;
     InputWidget?: JSX.Element;
 }
 
@@ -17,7 +18,8 @@ const TextInput = ({
     type,
     error,
     onBlur,
-    InputWidget
+    InputWidget,
+    onChangeEffect
 }: textInputInterface) => {
     return (
         <div className="form-group">
@@ -35,7 +37,13 @@ const TextInput = ({
                 type={type || 'text'}
                 className="form-control"
                 value={value}
-                onChange={(e) => valueSetter(e.target.value)}
+                onChange={(e) => {
+                    if (onChangeEffect) {
+                        onChangeEffect(e.target.value);
+                    }
+
+                    valueSetter(e.target.value);
+                }}
             />
             <div
                 className="text-danger fs-12"

@@ -20,13 +20,23 @@ const Register = () => {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState<string>('');
+    const [firstName, setFirstName] = useState<string>('');
+    const [lastName, setLastName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [repeatPassword, setRepeatPassword] = useState<string>('');
     const [errors, setErrors] = useState<{
         email: string | undefined;
         password: string | undefined;
         repeatPassword: string | undefined;
-    }>({ email: undefined, password: undefined, repeatPassword: undefined });
+        firstName: string | undefined;
+        lastName: string | undefined;
+    }>({
+        email: undefined,
+        password: undefined,
+        repeatPassword: undefined,
+        firstName: undefined,
+        lastName: undefined
+    });
     const [passwordQuality, setPasswordQuality] = useState<number>();
 
     const user = useSelector((state: any) => state.user);
@@ -49,7 +59,7 @@ const Register = () => {
             console.log(error.message);
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
-                headerText: t('notifications:signInNotificationHeader'),
+                headerText: t('notifications:signUpNotificationHeader'),
                 notificationKind: 'danger',
                 duration: 3000
             })(dispatch);
@@ -67,13 +77,14 @@ const Register = () => {
         dispatch(loginStart());
 
         try {
+            // TBD
             await createUserWithEmailAndPassword(auth, user, password);
             navigate('/');
         } catch (error: any) {
             console.log(error.message);
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
-                headerText: t('notifications:signInNotificationHeader'),
+                headerText: t('notifications:signUpNotificationHeader'),
                 notificationKind: 'danger',
                 duration: 3000
             })(dispatch);
@@ -85,7 +96,9 @@ const Register = () => {
             email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(),
             password: password === '' ? t('errors:passwordRequired') : errors.password,
             repeatPassword:
-                repeatPassword === '' ? t('errors:passwordRequired') : errors.repeatPassword
+                repeatPassword === '' ? t('errors:passwordRequired') : errors.repeatPassword,
+            firstName: firstName === '' ? t('errors:firstNameRequired') : undefined,
+            lastName: lastName === '' ? t('errors:lastNameRequired') : undefined
         };
 
         setErrors(errorsAfterVerification);
@@ -130,27 +143,6 @@ const Register = () => {
     };
 
     useEffect(() => {
-        setErrors((currentVal) => ({ ...currentVal, email: verifyEmailCompletion() }));
-    }, [email]);
-
-    useEffect(() => {
-        const score = verifyPasswordQuality(password);
-        setPasswordQuality(score);
-
-        if (score === 0 && password !== '') {
-            setErrors((currentVal) => ({
-                ...currentVal,
-                password: t('errors:shortPassword')
-            }));
-        } else {
-            setErrors((currentVal) => ({
-                ...currentVal,
-                password: undefined
-            }));
-        }
-    }, [password]);
-
-    useEffect(() => {
         if (password !== repeatPassword && repeatPassword !== '') {
             setErrors((currentVal) => ({
                 ...currentVal,
@@ -173,7 +165,10 @@ const Register = () => {
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    minWidth: 300
+                    minWidth: 300,
+                    maxHeight: '90vh',
+                    overflowY: 'auto'
+                    // justifyContent: 'center'
                 }}
             >
                 <div className="w-full">
@@ -195,6 +190,43 @@ const Register = () => {
                         <h1>PetProtekt</h1>
                     </div>
                     <TextInput
+                        label={t('auth:firstName')}
+                        value={firstName}
+                        valueSetter={setFirstName}
+                        error={errors.firstName}
+                        onBlur={() => {
+                            setErrors((currentValue) => ({
+                                ...currentValue,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
+                        onChangeEffect={() => {
+                            setErrors((currentVal) => ({
+                                ...currentVal,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
+                    />
+                    <TextInput
+                        label={t('auth:lastName')}
+                        value={lastName}
+                        valueSetter={setLastName}
+                        type="email"
+                        error={errors.lastName}
+                        onBlur={() => {
+                            setErrors((currentValue) => ({
+                                ...currentValue,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
+                        onChangeEffect={() => {
+                            setErrors((currentVal) => ({
+                                ...currentVal,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
+                    />
+                    <TextInput
                         label={t('auth:email')}
                         value={email}
                         valueSetter={setEmail}
@@ -203,6 +235,12 @@ const Register = () => {
                         onBlur={() => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
+                                email: verifyEmailCompletion()
+                            }));
+                        }}
+                        onChangeEffect={() => {
+                            setErrors((currentVal) => ({
+                                ...currentVal,
                                 email: verifyEmailCompletion()
                             }));
                         }}
@@ -218,6 +256,22 @@ const Register = () => {
                                 <PasswordQualityIndicator indicator={passwordQuality} />
                             ) : undefined
                         }
+                        onChangeEffect={() => {
+                            const score = verifyPasswordQuality(password);
+                            setPasswordQuality(score);
+
+                            if (score === 0 && password !== '') {
+                                setErrors((currentVal) => ({
+                                    ...currentVal,
+                                    password: t('errors:shortPassword')
+                                }));
+                            } else {
+                                setErrors((currentVal) => ({
+                                    ...currentVal,
+                                    password: undefined
+                                }));
+                            }
+                        }}
                     />
                     <TextInput
                         label={t('auth:repeatPassword')}
@@ -225,6 +279,19 @@ const Register = () => {
                         valueSetter={setRepeatPassword}
                         type="password"
                         error={errors.repeatPassword}
+                        onChangeEffect={() => {
+                            if (password !== repeatPassword && repeatPassword !== '') {
+                                setErrors((currentVal) => ({
+                                    ...currentVal,
+                                    repeatPassword: t('errors:passwordsMatch')
+                                }));
+                            } else {
+                                setErrors((currentVal) => ({
+                                    ...currentVal,
+                                    repeatPassword: undefined
+                                }));
+                            }
+                        }}
                     />
                     <div className="d-flex justify-content-center text-center mt-4 pt-1 gap-4">
                         <img
