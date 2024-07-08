@@ -6,7 +6,7 @@ interface textInputInterface {
     label: string;
     type?: string;
     error?: string;
-    onBlur?: () => void;
+    onBlur?: (e: HTMLInputElement['value']) => void;
     onChangeEffect?: (e: HTMLInputElement['value']) => void;
     InputWidget?: JSX.Element;
 }
@@ -33,7 +33,9 @@ const TextInput = ({
                 {InputWidget && InputWidget}
             </label>
             <input
-                onBlur={onBlur ? onBlur : () => {}}
+                onBlur={(e) => {
+                    onBlur ? onBlur(e.target.value) : () => {};
+                }}
                 type={type || 'text'}
                 className="form-control"
                 value={value}

@@ -37,7 +37,7 @@ const Register = () => {
         firstName: undefined,
         lastName: undefined
     });
-    const [passwordQuality, setPasswordQuality] = useState<number>();
+    const [passwordQuality, setPasswordQuality] = useState<number>(0);
 
     const user = useSelector((state: any) => state.user);
 
@@ -93,7 +93,7 @@ const Register = () => {
 
     const verifyFormCompletion = () => {
         const errorsAfterVerification = {
-            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(),
+            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(email),
             password: password === '' ? t('errors:passwordRequired') : errors.password,
             repeatPassword:
                 repeatPassword === '' ? t('errors:passwordRequired') : errors.repeatPassword,
@@ -106,10 +106,10 @@ const Register = () => {
         return !(values(errorsAfterVerification).filter((value) => value !== undefined).length > 0);
     };
 
-    const verifyEmailCompletion = () => {
-        if (email && !includes('@', email)) {
+    const verifyEmailCompletion = (emailValue: string) => {
+        if (emailValue && !includes('@', emailValue)) {
             return t('errors:emailMissing@');
-        } else if (startsWith('@', email) || endsWith('@', email)) {
+        } else if (startsWith('@', emailValue) || endsWith('@', emailValue)) {
             return t('errors:incompleteEmail');
         } else {
             return undefined;
@@ -139,6 +139,8 @@ const Register = () => {
             return 2;
         } else if (score >= 3) {
             return 3;
+        } else {
+            return 0;
         }
     };
 
@@ -194,16 +196,16 @@ const Register = () => {
                         value={firstName}
                         valueSetter={setFirstName}
                         error={errors.firstName}
-                        onBlur={() => {
+                        onBlur={(value) => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
-                        onChangeEffect={() => {
+                        onChangeEffect={(value) => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
                     />
@@ -213,16 +215,16 @@ const Register = () => {
                         valueSetter={setLastName}
                         type="email"
                         error={errors.lastName}
-                        onBlur={() => {
+                        onBlur={(value) => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
-                        onChangeEffect={() => {
+                        onChangeEffect={(value) => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
                     />
@@ -232,16 +234,16 @@ const Register = () => {
                         valueSetter={setEmail}
                         type="email"
                         error={errors.email}
-                        onBlur={() => {
+                        onBlur={(value) => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
-                        onChangeEffect={() => {
+                        onChangeEffect={(value) => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(value)
                             }));
                         }}
                     />
@@ -256,11 +258,11 @@ const Register = () => {
                                 <PasswordQualityIndicator indicator={passwordQuality} />
                             ) : undefined
                         }
-                        onChangeEffect={() => {
-                            const score = verifyPasswordQuality(password);
+                        onChangeEffect={(value) => {
+                            const score = verifyPasswordQuality(value);
                             setPasswordQuality(score);
 
-                            if (score === 0 && password !== '') {
+                            if (score === 0 && value !== '') {
                                 setErrors((currentVal) => ({
                                     ...currentVal,
                                     password: t('errors:shortPassword')
@@ -279,8 +281,8 @@ const Register = () => {
                         valueSetter={setRepeatPassword}
                         type="password"
                         error={errors.repeatPassword}
-                        onChangeEffect={() => {
-                            if (password !== repeatPassword && repeatPassword !== '') {
+                        onChangeEffect={(value) => {
+                            if (password !== value && value !== '') {
                                 setErrors((currentVal) => ({
                                     ...currentVal,
                                     repeatPassword: t('errors:passwordsMatch')
