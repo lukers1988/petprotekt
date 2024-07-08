@@ -1,6 +1,6 @@
 import { auth } from '@appConfig/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
