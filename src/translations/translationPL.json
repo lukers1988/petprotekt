@@ -24,5 +24,22 @@
     "notifications": {
         "signInNotificationHeader": "Logowanie",
         "signUpNotificationHeader": "Rejestracja"
+    },
+    "landingPage": {
+        "joinCommunity": "Dołącz do społeczności PetProtekt",
+        "and": "i",
+        "ensureBenefits": "zadbaj o dobre zdrowie Twojego Pupila już dziś!",
+        "subBenefits": "Subskrybując, zyskasz dostęp do spersonalizowanych narzędzi do zarządzania zdrowiem, konsultacji z ekspertami weterynarii oraz terminowych powiadomień, aby utrzymać Twojego futrzaka w zdrowiu i szczęściu. Nie przegap ekskluzywnych ofert, cennych porad i wspierającej społeczności poświęconej dobrostanowi Twojego zwierzaka. Zarejestruj się teraz i zrób pierwszy krok w kierunku zapewnienia swojemu zwierzakowi należnej opieki!",
+        "join": "Dołącz",
+        "whatWeDo": "Co robimy",
+        "forYourPet": "dla Twojego pupila",
+        "card1Header": "KOMPLEKSOWE ZARZĄDZANIE ZDROWIEM",
+        "card1Info": "Przechowuj wszystkie ważne informacje o swoim zwierzaku w jednym miejscu, w tym historię medyczną, zapisy szczepień i preferencje żywieniowe.",
+        "card2Header": "KONSULTACJE WETERYNARYJNE ONLINE",
+        "card2Info": "Umów się na wideo konsultacje z licencjonowanymi weterynarzami, aby uzyskać fachową poradę i szybką opiekę.",
+        "card3Header": "SPERSONALIZOWANE PORADY ŻYWIENIOWE",
+        "card3Info": "Otrzymuj dokładne zalecenia żywieniowe dostosowane do wieku, rasy i poziomu aktywności Twojego zwierzaka, aby zapewnić zrównoważoną dietę.",
+        "card4Header": "POWIADOMIENIA I RABATY",
+        "card4Info": "Otrzymuj terminowe powiadomienia o ważnych aktualizacjach zdrowotnych, rabatach na karmę i nadchodzących wydarzeniach dla zwierząt, aby być na bieżąco i oszczędzać pieniądze."
     }
 }

@@ -24,5 +24,22 @@
     "notifications": {
         "signInNotificationHeader": "Sign In",
         "signUpNotificationHeader": "Registration"
+    },
+    "landingPage": {
+        "joinCommunity": "Join the PetProtekt community",
+        "and": "and",
+        "ensureBenefits": "Ensure Your Pet's Best Health Today",
+        "subBenefits": "By subscribing, you'll have access to personalized health management tools, expert veterinary consultations, and timely notifications to keep your furry friend healthy and happy. Don’t miss out on exclusive offers, valuable tips, and a supportive community dedicated to your pet's well-being. Sign up now and take the first step towards giving your pet the care they deserve!",
+        "join": "Join",
+        "whatWeDo": "What we do",
+        "forYourPet": "for your pet",
+        "card1Header": "COMPREHENSIVE HEALTH MANAGEMENT",
+        "card1Info": "Keep all your pet's vital information in one place, including medical history, vaccination records, and dietary preferences.",
+        "card2Header": "ONLINE VETERINARY CONSULTATIONS",
+        "card2Info": "Schedule and conduct video consultations with licensed veterinarians for expert advice and timely care.",
+        "card3Header": "PERSONALIZED FEEDING GUIDANCE",
+        "card3Info": "Receive accurate feeding recommendations tailored to your pet's age, breed, and activity level to ensure balanced nutrition.",
+        "card4Header": "NOTIFICATIONS AND DISCOUNTS",
+        "card4Info": "Get timely notifications for important health updates, feed discounts, and upcoming pet events to keep you informed and save you money."
     }
 }
