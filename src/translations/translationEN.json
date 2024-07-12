@@ -30,7 +30,7 @@
         "and": "and",
         "ensureBenefits": "Ensure Your Pet's Best Health Today",
         "subBenefits": "By subscribing, you'll have access to personalized health management tools, expert veterinary consultations, and timely notifications to keep your furry friend healthy and happy. Don’t miss out on exclusive offers, valuable tips, and a supportive community dedicated to your pet's well-being. Sign up now and take the first step towards giving your pet the care they deserve!",
-        "join": "Join",
+        "join": "JOIN",
         "whatWeDo": "What we do",
         "forYourPet": "for your pet",
         "card1Header": "COMPREHENSIVE HEALTH MANAGEMENT",
@@ -40,6 +40,12 @@
         "card3Header": "PERSONALIZED FEEDING GUIDANCE",
         "card3Info": "Receive accurate feeding recommendations tailored to your pet's age, breed, and activity level to ensure balanced nutrition.",
         "card4Header": "NOTIFICATIONS AND DISCOUNTS",
-        "card4Info": "Get timely notifications for important health updates, feed discounts, and upcoming pet events to keep you informed and save you money."
+        "card4Info": "Get timely notifications for important health updates, feed discounts, and upcoming pet events to keep you informed and save you money.",
+        "aboutUs": "About us",
+        "askQuestions": "Feel free to reach and ask questions",
+        "aboutUsInfo1HTML": "At <strong>PetProtekt</strong>, we're passionate about enhancing the well-being of pets and their owners. Our mission is to simplify pet care through innovative solutions that make managing your pet’s health effortless and enjoyable. From tracking vital health records to providing personalized feeding advice and offering online vet consultations, we aim to be your trusted partner in pet care.",
+        "aboutUsInfo2HTML" : "We understand the special bond between pets and their owners, and we're dedicated to supporting you every step of the way. With <strong>PetProtekt</strong>, you'll have access to a comprehensive suite of tools designed to keep your furry friends healthy, happy, and well-cared-for. Join us in revolutionizing pet care and ensure your pet receives the best care possible.",
+        "exploreMore": "EXPLORE MORE"
+        
     }
 }

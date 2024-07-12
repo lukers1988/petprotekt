@@ -7,16 +7,15 @@ import { universalGreen } from '@appConst/colors';
 const Home = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const mobileBreakpointWidth = 1024;
 
     return (
         <MobileContainerUnder
-            breakpoint={mobileBreakpointWidth}
+            $breakpoint={1024}
             style={{
                 padding: 50
             }}
         >
-            <HomeBg breakpoint={mobileBreakpointWidth} />
+            <HomeBg breakpoint={1320} />
             <div
                 style={{
                     maxWidth: 400,

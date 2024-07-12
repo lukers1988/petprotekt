@@ -26,9 +26,10 @@ const HomeBg = ({ breakpoint }: MobileBgInterface) => {
                     top: 0
                 }}
                 src={LandingHome1}
+                alt="Section background figure 1"
             />
             <ImageHiddenUnder
-                breakpoint={breakpoint}
+                $breakpoint={breakpoint}
                 style={{
                     width: 460,
                     position: 'absolute',
@@ -36,9 +37,10 @@ const HomeBg = ({ breakpoint }: MobileBgInterface) => {
                     top: 190
                 }}
                 src={LandingHome3}
+                alt="Section background figure 3"
             />
             <ImageHiddenUnder
-                breakpoint={breakpoint}
+                $breakpoint={breakpoint}
                 style={{
                     width: 393,
                     position: 'absolute',
@@ -46,9 +48,10 @@ const HomeBg = ({ breakpoint }: MobileBgInterface) => {
                     top: 120
                 }}
                 src={LandingHome2}
+                alt="Section background figure 2"
             />
             <ImageHiddenUnder
-                breakpoint={breakpoint}
+                $breakpoint={breakpoint}
                 style={{
                     width: 595,
                     position: 'absolute',
@@ -56,6 +59,7 @@ const HomeBg = ({ breakpoint }: MobileBgInterface) => {
                     top: 150
                 }}
                 src={LandingHome4}
+                alt="Section background figure 4"
             />
         </div>
     );
