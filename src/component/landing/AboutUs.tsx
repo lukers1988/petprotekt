@@ -39,7 +39,7 @@ const AboutUs = () => {
                     <br />
                     <div
                         style={{
-                            maxWidth: 300,
+                            width: 300,
                             height: 5,
                             backgroundColor: universalGreen,
                             position: 'absolute',

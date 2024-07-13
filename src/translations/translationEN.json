@@ -44,8 +44,15 @@
         "aboutUs": "About us",
         "askQuestions": "Feel free to reach and ask questions",
         "aboutUsInfo1HTML": "At <strong>PetProtekt</strong>, we're passionate about enhancing the well-being of pets and their owners. Our mission is to simplify pet care through innovative solutions that make managing your pet’s health effortless and enjoyable. From tracking vital health records to providing personalized feeding advice and offering online vet consultations, we aim to be your trusted partner in pet care.",
-        "aboutUsInfo2HTML" : "We understand the special bond between pets and their owners, and we're dedicated to supporting you every step of the way. With <strong>PetProtekt</strong>, you'll have access to a comprehensive suite of tools designed to keep your furry friends healthy, happy, and well-cared-for. Join us in revolutionizing pet care and ensure your pet receives the best care possible.",
-        "exploreMore": "EXPLORE MORE"
-        
+        "aboutUsInfo2HTML": "We understand the special bond between pets and their owners, and we're dedicated to supporting you every step of the way. With <strong>PetProtekt</strong>, you'll have access to a comprehensive suite of tools designed to keep your furry friends healthy, happy, and well-cared-for. Join us in revolutionizing pet care and ensure your pet receives the best care possible.",
+        "exploreMore": "EXPLORE MORE",
+        "whyCHooseHeaderHTML": "Why choose <strong>PetProtekt</strong>?",
+        "whyCHooseInfo1HTML": "<strong>Comprehensive Health Management:</strong> Easily store and access all your pet's medical records, dietary information, and vaccination history in one place.",
+        "whyCHooseInfo2HTML": "<strong>Convenient Online Consultations:</strong> Book video consultations with licensed veterinarians from the comfort of your home.",
+        "whyCHooseInfo3HTML": "<strong>Personalized Care:</strong> Get tailored feeding recommendations, health tips, and preventive care plans based on your pet's unique profile.",
+        "whyCHooseInfo4HTML": "<strong>Timely Notifications:</strong> Receive reminders for vaccinations, alerts about regional disease risks, and discounts on pet products.",
+        "whyCHooseInfo5HTML": "<strong>Support and Community:</strong> Access grief counseling and connect with other pet owners for advice and support.",
+        "whyCHooseInfo6HTML": "<strong>User-Friendly Interface:</strong> Enjoy an intuitive app designed to make managing your pet's health easy and hassle-free.",
+        "whyCHooseInfo7HTML": "<strong>Trusted Expertise:</strong> Rely on accurate and reliable information from our team of veterinary professionals. Choose PetProtekt for convenient, comprehensive, and personalized pet care. Sign up today!"
     }
 }

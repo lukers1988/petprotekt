@@ -44,7 +44,15 @@
         "aboutUs": "O nas",
         "askQuestions": "Nie wahaj się skontaktować i zadawać pytania",
         "aboutUsInfo1HTML": "W <strong>PetProtekt</strong> jesteśmy pasjonatami poprawy dobrostanu zwierząt i ich właścicieli. Naszą misją jest uproszczenie opieki nad zwierzętami dzięki innowacyjnym rozwiązaniom, które sprawiają, że zarządzanie zdrowiem Twojego pupila jest łatwe i przyjemne. Od śledzenia ważnych danych zdrowotnych po dostarczanie spersonalizowanych porad dotyczących karmienia i oferowanie konsultacji weterynaryjnych online, dążymy do tego, aby być Twoim zaufanym partnerem w opiece nad zwierzętami.",
-        "aboutUsInfo2HTML" : "Rozumiemy szczególną więź między zwierzętami a ich właścicielami i jesteśmy zaangażowani w wspieranie Cię na każdym kroku. Dzięki <strong>PetProtekt</strong> będziesz mieć dostęp do kompleksowego zestawu narzędzi zaprojektowanych tak, aby Twoi futrzani przyjaciele byli zdrowi, szczęśliwi i dobrze zaopiekowani. Dołącz do nas w rewolucji opieki nad zwierzętami i zapewnij swojemu pupilowi najlepszą możliwą opiekę.",
-        "exploreMore": "DOWIEDZ SIĘ WIĘCEJ"
+        "aboutUsInfo2HTML": "Rozumiemy szczególną więź między zwierzętami a ich właścicielami i jesteśmy zaangażowani w wspieranie Cię na każdym kroku. Dzięki <strong>PetProtekt</strong> będziesz mieć dostęp do kompleksowego zestawu narzędzi zaprojektowanych tak, aby Twoi futrzani przyjaciele byli zdrowi, szczęśliwi i dobrze zaopiekowani. Dołącz do nas w rewolucji opieki nad zwierzętami i zapewnij swojemu pupilowi najlepszą możliwą opiekę.",
+        "exploreMore": "DOWIEDZ SIĘ WIĘCEJ",
+        "whyCHooseHeaderHTML": "Dlaczego warto wybrać <strong>PetProtekt</strong>?",
+        "whyCHooseInfo1HTML": "<strong>Kompleksowe zarządzanie zdrowiem:</strong> Łatwo przechowuj i uzyskuj dostęp do wszystkich medycznych danych Twojego zwierzaka, informacji o diecie i historii szczepień w jednym miejscu.",
+        "whyCHooseInfo2HTML": "<strong>Wygodne konsultacje online:</strong> Rezerwuj wideokonsultacje z licencjonowanymi weterynarzami z komfortu swojego domu.",
+        "whyCHooseInfo3HTML": "<strong>Spersonalizowana opieka:</strong> Otrzymuj dostosowane rekomendacje dotyczące karmienia, porady zdrowotne i plany profilaktyczne na podstawie unikalnego profilu Twojego zwierzaka.",
+        "whyCHooseInfo4HTML": "<strong>Terminowe powiadomienia:</strong> Otrzymuj przypomnienia o szczepieniach, alerty dotyczące ryzyka chorób w regionie i zniżki na produkty dla zwierząt.",
+        "whyCHooseInfo5HTML": "<strong>Wsparcie i społeczność:</strong> Korzystaj z poradnictwa w żałobie i łącz się z innymi właścicielami zwierząt w celu uzyskania porad i wsparcia.",
+        "whyCHooseInfo6HTML": "<strong>Przyjazny interfejs:</strong> Ciesz się intuicyjną aplikacją, która ułatwia zarządzanie zdrowiem Twojego zwierzaka bez zbędnych trudności.",
+        "whyCHooseInfo7HTML": "<strong>Zaufana wiedza:</strong> Polegaj na dokładnych i wiarygodnych informacjach od naszego zespołu specjalistów weterynarii. Wybierz PetProtekt dla wygodnej, kompleksowej i spersonalizowanej opieki nad zwierzętami. Zarejestruj się już dziś!"
     }
 }

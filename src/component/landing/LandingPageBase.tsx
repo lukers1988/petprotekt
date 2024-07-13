@@ -1,6 +1,7 @@
 import Home from '@appComponents/landing/Home';
 import Services from '@appComponents/landing/Services';
 import AboutUs from '@appComponents/landing/AboutUs';
+import WhyChoose from '@appComponents/landing/WhyChoose';
 
 const LandingPageBase = () => {
     return (
@@ -15,6 +16,7 @@ const LandingPageBase = () => {
             <Home />
             <Services />
             <AboutUs />
+            <WhyChoose />
         </div>
     );
 };
