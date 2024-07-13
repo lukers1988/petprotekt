@@ -11,22 +11,19 @@ import CardIcon3 from '@appImages/landing-services-card-3.svg';
 import CardIcon4 from '@appImages/landing-services-card-4.svg';
 import SliderCard from '@appComponents/common/SliderCard';
 import MobileContainerUnder from '@appComponents/styled/MobileContainerUnder';
+import HiddenDummy from '@appComponents/common/HiddenDummy';
 
 const Services = () => {
     const { t } = useTranslation();
     const sliderRef = useRef<Slider | null>(null);
-
-    const HiddenArrow = () => {
-        return <div style={{ display: 'none' }}></div>;
-    };
 
     const sliderSettings = {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        nextArrow: <HiddenArrow />,
-        prevArrow: <HiddenArrow />,
+        nextArrow: <HiddenDummy />,
+        prevArrow: <HiddenDummy />,
         responsive: [
             {
                 breakpoint: 1310,

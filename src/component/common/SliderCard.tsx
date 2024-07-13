@@ -1,18 +1,30 @@
+import { ReactNode } from 'react';
+
 interface SlicerCardInterface {
-    headerText: string;
+    headerText?: string;
     infoText: string;
     icon: string;
     iconBg: string;
-    height: number;
+    height?: number;
+    width?: number;
+    footer?: ReactNode;
 }
 
-const SliderCard = ({ headerText, infoText, icon, iconBg, height }: SlicerCardInterface) => {
+const SliderCard = ({
+    headerText,
+    infoText,
+    icon,
+    iconBg,
+    height,
+    width,
+    footer
+}: SlicerCardInterface) => {
     return (
         <div>
             <div
                 style={{
                     height: height || 190,
-                    maxWidth: 310,
+                    maxWidth: width || 310,
                     backgroundColor: 'white',
                     display: 'flex',
                     margin: '20px auto 20px auto',
@@ -64,6 +76,7 @@ const SliderCard = ({ headerText, infoText, icon, iconBg, height }: SlicerCardIn
                 >
                     {infoText}
                 </p>
+                {footer && footer}
             </div>
         </div>
     );
