@@ -3,7 +3,7 @@ import CreateContainerOver from '@appComponents/styled/CreateContainerOver';
 import GoogleMapReact from 'google-map-react';
 import { Button, InputGroup, Form } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
 import customAxios from '@appConfig/customAxios';
 import { showNotificationWithDuration } from '@appStore/NotificationReducer';
@@ -17,6 +17,10 @@ const Contact = () => {
 
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
     const mobileBreakpoint = 1320;
+
+    useEffect(() => {
+        setEmailError(undefined);
+    }, [email]);
 
     return (
         <MobileContainerUnder
