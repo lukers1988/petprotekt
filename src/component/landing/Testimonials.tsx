@@ -7,7 +7,7 @@ import QuoteIcon from '@appImages/quote-mark.svg';
 import SliderCard from '@appComponents/common/SliderCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
-import ShowContainerOver from '@appComponents/styled/ShowContainerOver';
+import ShowContainerUnder from '@appComponents/styled/ShowContainerUnder';
 
 const Testimonials = () => {
     const { t } = useTranslation();
@@ -131,7 +131,7 @@ const Testimonials = () => {
                     })}
                 </Slider>
             </div>
-            <ShowContainerOver
+            <ShowContainerUnder
                 $breakpoint={660}
                 style={{
                     gap: 20,
@@ -162,7 +162,7 @@ const Testimonials = () => {
                         cursor: 'pointer'
                     }}
                 />
-            </ShowContainerOver>
+            </ShowContainerUnder>
         </div>
     );
 };

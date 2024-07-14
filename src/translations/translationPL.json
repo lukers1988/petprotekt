@@ -23,7 +23,9 @@
     },
     "notifications": {
         "signInNotificationHeader": "Logowanie",
-        "signUpNotificationHeader": "Rejestracja"
+        "signUpNotificationHeader": "Rejestracja",
+        "mailingListNotificationHeader": "Lista mailingowa",
+        "mailingListNotificationInfo": "Adres email został dodany do listy mailingowej!"
     },
     "landingPage": {
         "joinCommunity": "Dołącz do społeczności PetProtekt",
@@ -57,6 +59,11 @@
         "ourTestimonials": "Nasze referencje",
         "clientsSaying": "Co mówią nasi klienci",
         "testimonial1": "PetProtekt zmienił zasady gry w zarządzaniu zdrowiem mojego psa. Konsultacje online są bardzo wygodne, a spersonalizowane porady dotyczące karmienia są świetne. Gorąco polecam!",
-        "testimonial2": "Ta aplikacja sprawia, że śledzenie dokumentacji medycznej i szczepień mojego kota jest bardzo proste. Terminowe powiadomienia i usługi wsparcia są niezwykle pomocne. PetProtekt to must-have dla każdego właściciela zwierzaka!"
+        "testimonial2": "Ta aplikacja sprawia, że śledzenie dokumentacji medycznej i szczepień mojego kota jest bardzo proste. Terminowe powiadomienia i usługi wsparcia są niezwykle pomocne. PetProtekt to must-have dla każdego właściciela zwierzaka!",
+        "joinToday": "Dołącz do społeczności PetProtekt już dziś!",
+        "contactInfo1": "Doświadcz najwyższej wygody i spokoju ducha w zarządzaniu zdrowiem swojego zwierzaka z PetProtekt. Nasza kompleksowa, przyjazna dla użytkownika aplikacja oferuje wszystko, czego potrzebujesz, aby Twój futrzany przyjaciel był szczęśliwy i zdrowy. Od spersonalizowanych zaleceń dotyczących opieki po łatwy dostęp do konsultacji weterynaryjnych i terminowych powiadomień, PetProtekt jest tutaj, aby wspierać Cię na każdym kroku. Dołącz do naszej rosnącej społeczności właścicieli zwierząt, którzy dbają o najlepszą opiekę dla swoich pupili. Zarejestruj się teraz i zrób pierwszy krok ku lepszemu zdrowiu swojego zwierzaka!",
+        "getInTouch": "SKONTAKTUJ SIĘ Z NAMI",
+        "emailAddress": "Podaj swój adres e-mail",
+        "sendEmail": "WYŚLIJ!"
     }
 }

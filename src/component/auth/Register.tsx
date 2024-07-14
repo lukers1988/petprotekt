@@ -10,9 +10,10 @@ import DogIcon from '@appImages/dog.svg';
 import GoogleLoginIcon from '@appImages/google-login.svg';
 import FacebookLoginIcon from '@appImages/facebook-login.svg';
 import { useTranslation } from 'react-i18next';
-import { includes, startsWith, endsWith, values } from 'ramda';
+import { values } from 'ramda';
 import { Spinner } from 'react-bootstrap';
 import PasswordQualityIndicator from './PsswordQualityIndicator';
+import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
 
 const Register = () => {
     const { t } = useTranslation();
@@ -93,7 +94,7 @@ const Register = () => {
 
     const verifyFormCompletion = () => {
         const errorsAfterVerification = {
-            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(email),
+            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(t, email),
             password: password === '' ? t('errors:passwordRequired') : errors.password,
             repeatPassword:
                 repeatPassword === '' ? t('errors:passwordRequired') : errors.repeatPassword,
@@ -104,16 +105,6 @@ const Register = () => {
         setErrors(errorsAfterVerification);
 
         return !(values(errorsAfterVerification).filter((value) => value !== undefined).length > 0);
-    };
-
-    const verifyEmailCompletion = (emailValue: string) => {
-        if (emailValue && !includes('@', emailValue)) {
-            return t('errors:emailMissing@');
-        } else if (startsWith('@', emailValue) || endsWith('@', emailValue)) {
-            return t('errors:incompleteEmail');
-        } else {
-            return undefined;
-        }
     };
 
     const verifyPasswordQuality = (password: string) => {
@@ -225,13 +216,13 @@ const Register = () => {
                         onBlur={(value) => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
-                                email: verifyEmailCompletion(value)
+                                email: verifyEmailCompletion(t, value)
                             }));
                         }}
                         onChangeEffect={(value) => {
                             setErrors((currentVal) => ({
                                 ...currentVal,
-                                email: verifyEmailCompletion(value)
+                                email: verifyEmailCompletion(t, value)
                             }));
                         }}
                     />

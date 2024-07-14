@@ -11,8 +11,9 @@ import DogIcon from '@appImages/dog.svg';
 import GoogleLoginIcon from '@appImages/google-login.svg';
 import FacebookLoginIcon from '@appImages/facebook-login.svg';
 import { useTranslation } from 'react-i18next';
-import { includes, startsWith, endsWith, values } from 'ramda';
+import { values } from 'ramda';
 import { Spinner } from 'react-bootstrap';
+import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
 
 const Login = () => {
     const { t } = useTranslation();
@@ -74,23 +75,13 @@ const Login = () => {
 
     const verifyFormCompletion = () => {
         const errorsAfterVerification = {
-            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(),
+            email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(t, email),
             password: password === '' ? t('errors:passwordRequired') : undefined
         };
 
         setErrors(errorsAfterVerification);
 
         return !(values(errorsAfterVerification).filter((value) => value !== undefined).length > 0);
-    };
-
-    const verifyEmailCompletion = () => {
-        if (email && !includes('@', email)) {
-            return t('errors:emailMissing@');
-        } else if (startsWith('@', email) || endsWith('@', email)) {
-            return t('errors:incompleteEmail');
-        } else {
-            return undefined;
-        }
     };
 
     return (
@@ -132,7 +123,7 @@ const Login = () => {
                         onBlur={() => {
                             setErrors((currentValue) => ({
                                 ...currentValue,
-                                email: verifyEmailCompletion()
+                                email: verifyEmailCompletion(t, email)
                             }));
                         }}
                         onChangeEffect={() => {

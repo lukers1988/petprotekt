@@ -3,12 +3,12 @@ import Services from '@appComponents/landing/Services';
 import AboutUs from '@appComponents/landing/AboutUs';
 import WhyChoose from '@appComponents/landing/WhyChoose';
 import Testimonials from '@appComponents/landing/Testimonials';
+import Contact from '@appComponents/landing/Contact';
 
 const LandingPageBase = () => {
     return (
         <div
             style={{
-                // TODO - decide if we want to go any wider than that
                 maxWidth: 1440,
                 position: 'relative',
                 margin: 'auto'
@@ -19,6 +19,7 @@ const LandingPageBase = () => {
             <AboutUs />
             <WhyChoose />
             <Testimonials />
+            <Contact />
         </div>
     );
 };

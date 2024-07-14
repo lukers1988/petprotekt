@@ -12,7 +12,8 @@ export default defineConfig({
             '@appStore': path.resolve(__dirname, './src/store'),
             '@appImages': path.resolve(__dirname, './src/images'),
             '@appInterfaces': path.resolve(__dirname, './src/interfaces'),
-            '@appConst': path.resolve(__dirname, './src/const/')
+            '@appConst': path.resolve(__dirname, './src/const/'),
+            '@appHelpers': path.resolve(__dirname, './src/helpers/')
         }
     },
     server: {

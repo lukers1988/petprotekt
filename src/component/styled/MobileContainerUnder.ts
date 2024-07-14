@@ -7,7 +7,7 @@ const MobileContainerUnder = styled.div<{ $breakpoint: number }>`
         justify-content: center !important;
         align-items: center !important;
         text-align: center;
-        flex-direction: column;
+        flex-direction: column !important;
     }
   `}
 `;
