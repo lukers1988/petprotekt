@@ -73,6 +73,12 @@ const Login = () => {
         }
     };
 
+    const handleTestRequest = () => {
+        customAxios.get('https://petprotekt-api-xv7vrwqjca-uc.a.run.app').then((response: any) => {
+            console.log(response);
+        });
+    }
+
     const verifyFormCompletion = () => {
         const errorsAfterVerification = {
             email: email === '' ? t('errors:emailRequired') : verifyEmailCompletion(t, email),
@@ -114,6 +120,13 @@ const Login = () => {
                             }}
                         />
                         <h1>PetProtekt</h1>
+                    </div>
+                    <div>
+                        test button: <button
+                            type="submit"
+                            className="btn btn-primary btn-block"
+                            onClick={() => handleTestRequest()}
+                        > test </button>
                     </div>
                     <TextInput
                         label={t('auth:email')}
