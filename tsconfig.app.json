@@ -30,7 +30,8 @@
       "@appImages/*": ["images/*"],
       "@appInterfaces/*": ["interfaces/*"],
       "@appConst/*": ["const/*"],
-      "@appHelpers/*": ["helpers/*"]
+      "@appHelpers/*": ["helpers/*"],
+      "@appHooks/*": ["hooks/*"]
     }
   },
   "include": ["src"]

@@ -64,6 +64,10 @@
         "contactInfo1": "Doświadcz najwyższej wygody i spokoju ducha w zarządzaniu zdrowiem swojego zwierzaka z PetProtekt. Nasza kompleksowa, przyjazna dla użytkownika aplikacja oferuje wszystko, czego potrzebujesz, aby Twój futrzany przyjaciel był szczęśliwy i zdrowy. Od spersonalizowanych zaleceń dotyczących opieki po łatwy dostęp do konsultacji weterynaryjnych i terminowych powiadomień, PetProtekt jest tutaj, aby wspierać Cię na każdym kroku. Dołącz do naszej rosnącej społeczności właścicieli zwierząt, którzy dbają o najlepszą opiekę dla swoich pupili. Zarejestruj się teraz i zrób pierwszy krok ku lepszemu zdrowiu swojego zwierzaka!",
         "getInTouch": "SKONTAKTUJ SIĘ Z NAMI",
         "emailAddress": "Podaj swój adres e-mail",
-        "sendEmail": "WYŚLIJ!"
+        "sendEmail": "WYŚLIJ!",
+        "homeMenuLabel": "Strona główna",
+        "aboutUsMenuLabel": "O nas",
+        "servicesMenuLabel": "Usługi",
+        "contactMenuLabel": "Kontakt"
     }
 }

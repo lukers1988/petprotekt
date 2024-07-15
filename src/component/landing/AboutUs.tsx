@@ -10,6 +10,7 @@ const AboutUs = () => {
 
     return (
         <MobileContainerUnder
+            id='about-us'
             $breakpoint={1435}
             style={{
                 position: 'relative',

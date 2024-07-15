@@ -24,6 +24,7 @@ const Contact = () => {
 
     return (
         <MobileContainerUnder
+            id="contact"
             $breakpoint={mobileBreakpoint}
             style={{
                 marginTop: 50,

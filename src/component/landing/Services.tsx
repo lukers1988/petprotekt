@@ -79,11 +79,12 @@ const Services = () => {
 
     return (
         <div
+            id="services"
             style={{
                 position: 'relative',
                 minHeight: 504,
                 marginTop: 50,
-                paddingTop: 70,
+                paddingTop: 20,
                 marginBottom: 100,
                 backgroundColor: '#A0FE2820'
             }}
@@ -93,7 +94,7 @@ const Services = () => {
                 style={{
                     textAlign: 'center',
                     position: 'relative',
-                    maxWidth: 300,
+                    maxWidth: 350,
                     margin: '0px auto 30px auto'
                 }}
             >

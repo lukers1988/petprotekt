@@ -64,6 +64,10 @@
         "contactInfo1": "Experience the ultimate convenience and peace of mind in managing your pet's health with PetProtekt. Our comprehensive, user-friendly app offers everything you need to ensure your furry friend stays happy and healthy. From personalized care recommendations to easy access to veterinary consultations and timely notifications, PetProtekt is here to support you every step of the way. Join our growing community of pet owners dedicated to providing the best care for their pets. Sign up now and take the first step towards better pet health!",
         "getInTouch": "GET IN TOUCH",
         "emailAddress": "Enter your email address",
-        "sendEmail": "SEND!"
+        "sendEmail": "SEND!",
+        "homeMenuLabel": "Home",
+        "aboutUsMenuLabel": "About Us",
+        "servicesMenuLabel": "Services",
+        "contactMenuLabel": "Contact"
     }
 }

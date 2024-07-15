@@ -13,7 +13,8 @@ export default defineConfig({
             '@appImages': path.resolve(__dirname, './src/images'),
             '@appInterfaces': path.resolve(__dirname, './src/interfaces'),
             '@appConst': path.resolve(__dirname, './src/const/'),
-            '@appHelpers': path.resolve(__dirname, './src/helpers/')
+            '@appHelpers': path.resolve(__dirname, './src/helpers/'),
+            '@appHooks': path.resolve(__dirname, './src/hooks/')
         }
     },
     server: {

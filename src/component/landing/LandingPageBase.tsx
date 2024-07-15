@@ -4,6 +4,7 @@ import AboutUs from '@appComponents/landing/AboutUs';
 import WhyChoose from '@appComponents/landing/WhyChoose';
 import Testimonials from '@appComponents/landing/Testimonials';
 import Contact from '@appComponents/landing/Contact';
+import Header from '@appComponents/landing/Header';
 
 const LandingPageBase = () => {
     return (
@@ -14,6 +15,7 @@ const LandingPageBase = () => {
                 margin: 'auto'
             }}
         >
+            <Header />
             <Home />
             <Services />
             <AboutUs />
