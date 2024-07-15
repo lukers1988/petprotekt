@@ -92,7 +92,6 @@ const Login = () => {
 
     return (
         <div className="w-full h-screen">
-            {import.meta.env.VITE_BACKEND_URL}
             <div
                 className="authincation-content p-5 col-lg-5 col-md-6 flex flex-column"
                 style={{
