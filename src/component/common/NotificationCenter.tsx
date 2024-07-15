@@ -13,7 +13,7 @@ const NotificationCenter = () => {
         <ToastContainer
             style={{
                 zIndex: 10,
-                position: 'absolute',
+                position: 'fixed',
                 top: 10,
                 right: 10
             }}
@@ -29,7 +29,8 @@ const NotificationCenter = () => {
                         bg={notificationKind}
                         show={true}
                         style={{
-                            color: 'white'
+                            color: 'white',
+                            maxWidth: 300
                         }}
                     >
                         <Toast.Header

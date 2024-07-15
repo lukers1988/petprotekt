@@ -29,7 +29,9 @@
       "@appStore/*": ["store/*"],
       "@appImages/*": ["images/*"],
       "@appInterfaces/*": ["interfaces/*"],
-      "@appConst/*": ["const/*"]
+      "@appConst/*": ["const/*"],
+      "@appHelpers/*": ["helpers/*"],
+      "@appHooks/*": ["hooks/*"]
     }
   },
   "include": ["src"]

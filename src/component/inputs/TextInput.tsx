@@ -50,7 +50,8 @@ const TextInput = ({
             <div
                 className="text-danger fs-12"
                 style={{
-                    height: 5
+                    height: 5,
+                    marginBottom: 30
                 }}
             >
                 {error}
