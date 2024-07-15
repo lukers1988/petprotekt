@@ -74,7 +74,7 @@ const Login = () => {
     };
 
     const handleTestRequest = () => {
-        customAxios.get('https://petprotekt-api-xv7vrwqjca-uc.a.run.app').then((response: any) => {
+        customAxios.get('/').then((response: any) => {
             console.log(response);
         });
     }

@@ -1,7 +1,7 @@
 FROM node:18-alpine as build
 
 ARG VITE_BACKEND_URL
-ENV VITE_BACKEND_URL=https://lukers1988.usermd.net:19408/api/
+ENV VITE_BACKEND_URL=https://petprotekt-api-xv7vrwqjca-uc.a.run.app
 
 WORKDIR /app
 
