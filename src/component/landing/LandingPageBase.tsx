@@ -5,6 +5,7 @@ import WhyChoose from '@appComponents/landing/WhyChoose';
 import Testimonials from '@appComponents/landing/Testimonials';
 import Contact from '@appComponents/landing/Contact';
 import Header from '@appComponents/landing/Header';
+import TopScrollButton from '@appComponents/common/TopScrolButton';
 
 const LandingPageBase = () => {
     return (
@@ -22,6 +23,7 @@ const LandingPageBase = () => {
             <WhyChoose />
             <Testimonials />
             <Contact />
+            <TopScrollButton />
         </div>
     );
 };
