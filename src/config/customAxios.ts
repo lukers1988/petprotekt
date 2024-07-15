@@ -4,7 +4,7 @@ const getToken = (): string => {
     return localStorage.getItem('token') || '';
 };
 
-const publicPaths =  ['/api/auth/login', '/api/auth/login/google', '/api/auth/login/google/callback', '/api/auth/register']
+const publicPaths =  ['/auth', '/auth/login/google', '/auth/login/google/callback', '/auth/register']
 
 const customAxios = axios.create({
     baseURL: import.meta.env.VITE_BACKEND_URL
