@@ -2,7 +2,7 @@ FROM node:18-alpine as build
 
 ARG VITE_BACKEND_URL
 ARG VITE_GOOGLE_MAPS_API_KEY
-ENV VITE_BACKEND_URL=https://petprotekt-api-xv7vrwqjca-uc.a.run.app
+ENV VITE_BACKEND_URL=https://lukers1988.usermd.net/index.php
 ENV VITE_GOOGLE_MAPS_API_KEY=AIzaSyDsMoaPnFemj6kdtU8hhkEtgtEgDvAGgOE
 
 WORKDIR /app
