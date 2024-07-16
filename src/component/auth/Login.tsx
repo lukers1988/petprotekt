@@ -34,8 +34,7 @@ const Login = () => {
 
         try {
             customAxios.get('/auth/login/google/').then((response: any) => {
-                console.log(response)
-                // window.location.href = response.data.google_url;
+                window.location.href = response.data.google_url;
             });
         } catch (error: any) {
             console.error(error.message);
