@@ -33,7 +33,7 @@ const Login = () => {
         dispatch(loginStart());
 
         try {
-            customAxios.get('/auth/login/google').then((response: any) => {
+            customAxios.get('/auth/login/google/').then((response: any) => {
                 console.log(response)
                 // window.location.href = response.data.google_url;
             });
