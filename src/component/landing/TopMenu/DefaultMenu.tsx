@@ -8,9 +8,13 @@ const DefaultManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterf
             <div
                 key={target}
                 onClick={() =>
-                    scrollToDiv(target, () => {
-                        selectedSetter(target);
-                    })
+                    scrollToDiv(
+                        target,
+                        () => {
+                            selectedSetter(target);
+                        },
+                        '/'
+                    )
                 }
                 style={{
                     borderBottom: selected === target ? 'solid 2px #FDC221' : 'none',

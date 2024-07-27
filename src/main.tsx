@@ -18,8 +18,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <Provider store={store}>
             <PrimeReactProvider>
-                <NotificationCenter />
-                <MainRoutes />
+                <div
+                    style={{
+                        maxWidth: 1440,
+                        margin: 'auto'
+                    }}
+                >
+                    <MainRoutes />
+                    <NotificationCenter />
+                </div>
             </PrimeReactProvider>
         </Provider>
     </React.StrictMode>

@@ -28,6 +28,7 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                         const { label, target } = item;
                         return (
                             <ListGroup.Item
+                                key={label}
                                 style={{
                                     backgroundColor: '#fff',
                                     display: 'flex',
@@ -39,9 +40,13 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                                 <div
                                     key={target}
                                     onClick={() => {
-                                        scrollToDiv(target, () => {
-                                            selectedSetter(target);
-                                        });
+                                        scrollToDiv(
+                                            target,
+                                            () => {
+                                                selectedSetter(target);
+                                            },
+                                            '/'
+                                        );
                                         setMenuOpen(false);
                                     }}
                                     style={{
