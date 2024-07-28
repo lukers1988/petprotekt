@@ -1,9 +1,9 @@
 import { auth } from '@appConfig/firebase';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
+import { loginFailure, loginStart } from '@appStore/UserReducer';
 import { showNotificationWithDuration } from '@appStore/NotificationReducer';
 import TextInput from '@appComponents/inputs/TextInput';
 import DogIcon from '@appImages/dog.svg';
@@ -14,6 +14,7 @@ import { values } from 'ramda';
 import { Spinner } from 'react-bootstrap';
 import PasswordQualityIndicator from './PsswordQualityIndicator';
 import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
+import customAxios from '@appConfig/customAxios';
 
 const Register = () => {
     const { t } = useTranslation();
@@ -46,21 +47,13 @@ const Register = () => {
         dispatch(loginStart());
 
         try {
-            const provider = new GoogleAuthProvider();
-
-            provider.setCustomParameters({
-                prompt: 'select_account'
+            customAxios.get('/auth/login/google').then((response: any) => {
+                window.location.href = response.data.google_url;
             });
-
-            const userCredentials = await signInWithPopup(auth, provider);
-
-            dispatch(loginSuccess(userCredentials.user));
-            navigate('/');
         } catch (error: any) {
-            console.log(error.message);
-            dispatch(loginFailure(error.message));
+            console.error(error.message);
             showNotificationWithDuration({
-                headerText: t('notifications:signUpNotificationHeader'),
+                headerText: t('notifications:signInNotificationHeader'),
                 notificationKind: 'danger',
                 duration: 3000
             })(dispatch);

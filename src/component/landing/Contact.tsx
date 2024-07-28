@@ -77,6 +77,7 @@ const Contact = () => {
                             setEmail(e.target.value);
                         }}
                         placeholder={t('landingPage:emailAddress')}
+                        type="email"
                     />
                     <Button
                         onClick={() => {
@@ -84,7 +85,7 @@ const Contact = () => {
 
                             if (!newEmailError) {
                                 try {
-                                    customAxios.post('/mailing/add', { email }).then(() => {
+                                    customAxios.post('/subscribe', { email }).then(() => {
                                         showNotificationWithDuration({
                                             headerText: t(
                                                 'notifications:mailingListNotificationHeader'

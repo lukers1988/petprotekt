@@ -1,7 +1,10 @@
 import { scrollToDiv } from '@appHelpers/NavigationHelper';
 import LandingtMenuInterface from '@appInterfaces/LandingMenuInterface';
+import { useNavigate } from 'react-router';
 
 const DefaultManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterface) => {
+    const navigate = useNavigate();
+
     return menuItems.map((item) => {
         const { label, target } = item;
         return (
@@ -14,7 +17,7 @@ const DefaultManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterf
                             selectedSetter(target);
                         },
                         '/'
-                    )
+                    )(navigate)
                 }
                 style={{
                     borderBottom: selected === target ? 'solid 2px #FDC221' : 'none',

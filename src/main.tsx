@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MainRoutes from '@appConfig/main_routes.tsx';
 import { PrimeReactProvider } from 'primereact/api';
@@ -15,19 +14,17 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <PrimeReactProvider>
-                <div
-                    style={{
-                        maxWidth: 1440,
-                        margin: 'auto'
-                    }}
-                >
-                    <MainRoutes />
-                    <NotificationCenter />
-                </div>
-            </PrimeReactProvider>
-        </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+        <PrimeReactProvider>
+            <div
+                style={{
+                    maxWidth: 1440,
+                    margin: 'auto'
+                }}
+            >
+                <MainRoutes />
+                <NotificationCenter />
+            </div>
+        </PrimeReactProvider>
+    </Provider>
 );
