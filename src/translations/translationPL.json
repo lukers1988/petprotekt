@@ -68,6 +68,7 @@
         "homeMenuLabel": "Strona główna",
         "aboutUsMenuLabel": "O nas",
         "servicesMenuLabel": "Usługi",
-        "contactMenuLabel": "Kontakt"
+        "contactMenuLabel": "Kontakt",
+        "launchInfo": "Damy Ci znac o naszym starcie"
     }
 }

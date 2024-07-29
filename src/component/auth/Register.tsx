@@ -1,9 +1,7 @@
-import { auth } from '@appConfig/firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginFailure, loginStart } from '@appStore/UserReducer';
+import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
 import { showNotificationWithDuration } from '@appStore/NotificationReducer';
 import TextInput from '@appComponents/inputs/TextInput';
 import DogIcon from '@appImages/dog.svg';
@@ -71,11 +69,16 @@ const Register = () => {
         dispatch(loginStart());
 
         try {
-            // TBD
-            await createUserWithEmailAndPassword(auth, user, password);
-            navigate('/');
+            await customAxios.post('user/register', {
+                firstName,
+                lastName,
+                email,
+                password
+            });
+            // TODO - dodać dane
+            dispatch(loginSuccess({}));
+            navigate('/coming-soon');
         } catch (error: any) {
-            console.log(error.message);
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signUpNotificationHeader'),

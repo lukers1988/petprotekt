@@ -1,17 +1,12 @@
 import MobileContainerUnder from '@appComponents/styled/MobileContainerUnder';
 import CreateContainerOver from '@appComponents/styled/CreateContainerOver';
 import GoogleMapReact from 'google-map-react';
-import { Button, InputGroup, Form } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
-import customAxios from '@appConfig/customAxios';
-import { showNotificationWithDuration } from '@appStore/NotificationReducer';
-import { useDispatch } from 'react-redux';
+import SubscribeInput from '@appComponents/common/SubscribeInput';
 
 const Contact = () => {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
     const [email, setEmail] = useState<string>('');
     const [emailError, setEmailError] = useState<string | undefined>();
 
@@ -56,73 +51,13 @@ const Contact = () => {
                 >
                     {t('landingPage:contactInfo1')}
                 </p>
-                <p
-                    style={{
-                        color: '#fff',
-                        marginTop: 30,
-                        marginBottom: 5
-                    }}
-                >
-                    <strong>{t('landingPage:getInTouch')}</strong>
-                </p>
-                <InputGroup
-                    style={{
-                        maxWidth: '500px',
-                        marginBottom: 10
-                    }}
-                >
-                    <Form.Control
-                        value={email}
-                        onChange={(e) => {
-                            setEmail(e.target.value);
-                        }}
-                        placeholder={t('landingPage:emailAddress')}
-                        type="email"
-                    />
-                    <Button
-                        onClick={() => {
-                            const newEmailError = verifyEmailCompletion(t, email);
-
-                            if (!newEmailError) {
-                                try {
-                                    customAxios.post('/subscribe', { email }).then(() => {
-                                        showNotificationWithDuration({
-                                            headerText: t(
-                                                'notifications:mailingListNotificationHeader'
-                                            ),
-                                            bodyText: t(
-                                                'notifications:mailingListNotificationInfo'
-                                            ),
-                                            notificationKind: 'success',
-                                            duration: 3000
-                                        })(dispatch);
-                                    });
-                                } catch (e: any) {
-                                    showNotificationWithDuration({
-                                        headerText: t(
-                                            'notifications:mailingListNotificationHeader'
-                                        ),
-                                        notificationKind: 'danger',
-                                        duration: 3000
-                                    })(dispatch);
-                                }
-                            } else {
-                                setEmailError(newEmailError);
-                            }
-                        }}
-                    >
-                        <strong>{t('landingPage:sendEmail')}</strong>
-                    </Button>
-                </InputGroup>
-                <div
-                    className="text-danger fs-12"
-                    style={{
-                        height: 5,
-                        marginBottom: 30
-                    }}
-                >
-                    {emailError}
-                </div>
+                <SubscribeInput
+                    email={email}
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    setEmailError={setEmailError}
+                    label={t('landingPage:sendEmail')}
+                />
             </MobileContainerUnder>
             <CreateContainerOver
                 $breakpoint={465}

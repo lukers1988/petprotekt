@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { loginFailure, loginStart } from '@appStore/UserReducer';
+import { Link, useNavigate } from 'react-router-dom';
+import { loginFailure, loginStart, loginSuccess } from '@appStore/UserReducer';
 import { showNotificationWithDuration } from '@appStore/NotificationReducer';
 import customAxios from '@appConfig/customAxios';
 import TextInput from '@appComponents/inputs/TextInput';
@@ -16,6 +16,7 @@ import { verifyEmailCompletion } from '@appHelpers/FormVerificationMethods';
 const Login = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -54,9 +55,10 @@ const Login = () => {
         dispatch(loginStart());
 
         try {
-            customAxios.post('/auth').then((response: any) => {
-                console.log(response);
-            });
+            await customAxios.post('/auth_check');
+            // TODO - dodać dane
+            dispatch(loginSuccess({}));
+            navigate('/coming-soon');
         } catch (error: any) {
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
