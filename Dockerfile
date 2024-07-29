@@ -9,6 +9,8 @@ WORKDIR /app
 
 COPY . /app/
 
+COPY ./env-example ./.env
+
 RUN npm install
 
 RUN npm run build
