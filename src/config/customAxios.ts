@@ -7,7 +7,7 @@ const getToken = (): string => {
 const publicPaths =  ['/auth', '/auth/login/google', '/auth/login/google/callback', '/auth/register']
 
 const customAxios = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL
+    baseURL: 'http://localhost/api'
 });
 
 customAxios.interceptors.request.use(

@@ -68,6 +68,7 @@
         "homeMenuLabel": "Home",
         "aboutUsMenuLabel": "About Us",
         "servicesMenuLabel": "Services",
-        "contactMenuLabel": "Contact"
+        "contactMenuLabel": "Contact",
+        "launchInfo": "We will let you know whan we are launching"
     }
 }

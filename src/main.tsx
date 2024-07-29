@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MainRoutes from '@appConfig/main_routes.tsx';
 import { PrimeReactProvider } from 'primereact/api';
@@ -9,18 +8,24 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import store from '@appStore/store.ts';
 import './style.css';
+import './fonts.css';
 import './i18n.js';
 import NotificationCenter from '@appComponents/common/NotificationCenter.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <PrimeReactProvider>
-                <NotificationCenter />
+    <Provider store={store}>
+        <PrimeReactProvider>
+            <div
+                style={{
+                    maxWidth: 1440,
+                    margin: 'auto'
+                }}
+            >
                 <MainRoutes />
-            </PrimeReactProvider>
-        </Provider>
-    </React.StrictMode>
+                <NotificationCenter />
+            </div>
+        </PrimeReactProvider>
+    </Provider>
 );

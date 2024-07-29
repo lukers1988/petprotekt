@@ -4,9 +4,11 @@ import LandingtMenuInterface from '@appInterfaces/LandingMenuInterface';
 import { ListGroup } from 'react-bootstrap';
 import { scrollToDiv } from '@appHelpers/NavigationHelper';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterface) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div
@@ -28,6 +30,7 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                         const { label, target } = item;
                         return (
                             <ListGroup.Item
+                                key={label}
                                 style={{
                                     backgroundColor: '#fff',
                                     display: 'flex',
@@ -39,9 +42,13 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                                 <div
                                     key={target}
                                     onClick={() => {
-                                        scrollToDiv(target, () => {
-                                            selectedSetter(target);
-                                        });
+                                        scrollToDiv(
+                                            target,
+                                            () => {
+                                                selectedSetter(target);
+                                            },
+                                            '/'
+                                        )(navigate);
                                         setMenuOpen(false);
                                     }}
                                     style={{

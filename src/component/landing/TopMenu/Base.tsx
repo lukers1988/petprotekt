@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 import MobileMenu from '@appComponents/landing/TopMenu/MobileMenu';
 import DefaultMenu from '@appComponents/landing/TopMenu/DefaultMenu';
 import useScreenWidth from '@appHooks/useScreenWidth';
+import { endsWith } from 'ramda';
 
 const TopMenu = () => {
     const { t } = useTranslation();
-    const [selected, setSelected] = useState('home');
+    const [selected, setSelected] = useState('');
     const [scrollPosition, setScrollPosition] = useState(0);
     const screenWidth = useScreenWidth();
 
@@ -42,7 +43,7 @@ const TopMenu = () => {
     }, []);
 
     useEffect(() => {
-        if (scrollPosition < 100) {
+        if (scrollPosition < 100 && endsWith('/', window.location.href)) {
             setSelected('home');
         }
     }, [scrollPosition]);
@@ -57,7 +58,7 @@ const TopMenu = () => {
                 left: 30,
                 top: 10,
                 cursor: 'pointer',
-                 width: '90%'
+                width: '90%'
             }}
         >
             {screenWidth > 580 ? (

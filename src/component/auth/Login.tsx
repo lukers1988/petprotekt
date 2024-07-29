@@ -1,5 +1,3 @@
-import { auth } from '@appConfig/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -38,7 +36,6 @@ const Login = () => {
             });
         } catch (error: any) {
             console.error(error.message);
-            dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signInNotificationHeader'),
                 notificationKind: 'danger',
@@ -58,12 +55,11 @@ const Login = () => {
         dispatch(loginStart());
 
         try {
-            const userCredentials = await signInWithEmailAndPassword(auth, email, password);
-
-            dispatch(loginSuccess(userCredentials.user));
-            navigate('/');
+            await customAxios.post('/auth_check');
+            // TODO - dodać dane
+            dispatch(loginSuccess({}));
+            navigate('/coming-soon');
         } catch (error: any) {
-            console.log(error.message);
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signInNotificationHeader'),
@@ -72,12 +68,6 @@ const Login = () => {
             })(dispatch);
         }
     };
-
-    const handleTestRequest = () => {
-        customAxios.get('/').then((response: any) => {
-            console.log(response);
-        });
-    }
 
     const verifyFormCompletion = () => {
         const errorsAfterVerification = {
@@ -119,13 +109,6 @@ const Login = () => {
                             }}
                         />
                         <h1>PetProtekt</h1>
-                    </div>
-                    <div>
-                        test button: <button
-                            type="submit"
-                            className="btn btn-primary btn-block"
-                            onClick={() => handleTestRequest()}
-                        > test </button>
                     </div>
                     <TextInput
                         label={t('auth:email')}
