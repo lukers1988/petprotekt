@@ -55,7 +55,10 @@ const Login = () => {
         dispatch(loginStart());
 
         try {
-            await customAxios.post('/auth_check');
+            await customAxios.post( '/auth_check', {
+                username: email,
+                password: password
+            });
             // TODO - dodać dane
             dispatch(loginSuccess({}));
             navigate('/coming-soon');

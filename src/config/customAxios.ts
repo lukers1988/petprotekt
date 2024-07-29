@@ -4,7 +4,7 @@ const getToken = (): string => {
     return localStorage.getItem('token') || '';
 };
 
-const publicPaths =  ['/auth', '/auth/login/google', '/auth/login/google/callback', '/auth/register']
+const publicPaths =  ['/auth_check', '/auth/login/google', '/auth/login/google/callback', '/auth/register']
 
 const customAxios = axios.create({
     baseURL: 'http://localhost/api'
