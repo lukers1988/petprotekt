@@ -56,7 +56,7 @@ const Contact = () => {
                     setEmail={setEmail}
                     emailError={emailError}
                     setEmailError={setEmailError}
-                    label={t('landingPage:sendEmail')}
+                    label={t('landingPage:getInTouch')}
                 />
             </MobileContainerUnder>
             <CreateContainerOver

@@ -165,7 +165,11 @@ const Register = () => {
                         className="flex mb-5"
                         style={{
                             justifyContent: 'center',
-                            alignItems: 'end'
+                            alignItems: 'end',
+                            cursor: 'pointer'
+                        }}
+                        onClick={() => {
+                            navigate('/');
                         }}
                     >
                         <img
