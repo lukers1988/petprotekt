@@ -19,7 +19,8 @@
         "shortPassword": "Hasło musi zawierać conajmniej osiem znaków",
         "passwordsMatch": "Hasła muszą być takie same",
         "firstNameRequired": "Imię jest wymagane",
-        "lastNameRequired": "Nazwisko jest wymagane"
+        "lastNameRequired": "Nazwisko jest wymagane",
+        "incorrectCredentials": "Błędny login lub hasło"
     },
     "notifications": {
         "signInNotificationHeader": "Logowanie",
@@ -70,5 +71,11 @@
         "servicesMenuLabel": "Usługi",
         "contactMenuLabel": "Kontakt",
         "launchInfo": "Damy Ci znac o naszym starcie"
+    },
+    "common": {
+        "days": "dni",
+        "hours": "godzin",
+        "minutes": "minut",
+        "launchingSoon": "Wkrótce startujemy"
     }
 }

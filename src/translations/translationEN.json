@@ -19,7 +19,8 @@
         "shortPassword": "Password must consist of at least eight characters",
         "passwordsMatch": "Passwords must match",
         "firstNameRequired": "First name is required",
-        "lastNameRequired": "Last name is required"
+        "lastNameRequired": "Last name is required",
+        "incorrectCredentials": "Icorrect credentials"
     },
     "notifications": {
         "signInNotificationHeader": "Sign In",
@@ -70,5 +71,11 @@
         "servicesMenuLabel": "Services",
         "contactMenuLabel": "Contact",
         "launchInfo": "We will let you know whan we are launching"
+    },
+    "common": {
+        "days": "days",
+        "hours": "hours",
+        "minutes": "minutes",
+        "launchingSoon": "Launching soon"
     }
 }

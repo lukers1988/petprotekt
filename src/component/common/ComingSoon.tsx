@@ -75,7 +75,7 @@ const ComingSoon = () => {
                     zIndex: 20
                 }}
             >
-                Launching Soon
+                {t('common:launchingSoon')}
             </h1>
             <MobileContainerUnder
                 $breakpoint={1000}
@@ -88,11 +88,17 @@ const ComingSoon = () => {
                     width: '100%'
                 }}
             >
-                <DigitalClockFragment timeFragment={String(timeRemaining.days)} label="DAYS" />
-                <DigitalClockFragment timeFragment={String(timeRemaining.hours)} label="HOURS" />
+                <DigitalClockFragment
+                    timeFragment={String(timeRemaining.days)}
+                    label={t('common:days')}
+                />
+                <DigitalClockFragment
+                    timeFragment={String(timeRemaining.hours)}
+                    label={t('common:hours')}
+                />
                 <DigitalClockFragment
                     timeFragment={String(timeRemaining.minutes)}
-                    label="MINUTES"
+                    label={t('common:minutes')}
                 />
             </MobileContainerUnder>
             <div

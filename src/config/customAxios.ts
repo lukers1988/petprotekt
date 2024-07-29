@@ -33,9 +33,9 @@ customAxios.interceptors.response.use(
         return response;
     },
     (error: any): Promise<any> => {
-        if (error.response && error.response.status === 401) {
-            window.location.href = '/auth/login';
-        }
+        // if (error.response && error.response.status === 401) {
+        //     window.location.href = '/auth/login';
+        // }
 
         return Promise.reject(error);
     }

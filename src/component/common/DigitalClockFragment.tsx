@@ -52,7 +52,7 @@ const DigitalClockFragment = ({ timeFragment, label }: DigitalClockFragmentInter
                     color: 'inherit'
                 }}
             >
-                {label}
+                {label.toUpperCase()}
             </h1>
         </div>
     );

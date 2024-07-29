@@ -55,17 +55,16 @@ const Login = () => {
         dispatch(loginStart());
 
         try {
-            await customAxios.post( '/auth_check', {
+            const response = await customAxios.post<{ token: string }>('/auth_check', {
                 username: email,
                 password: password
             });
-            // TODO - dodać dane
-            dispatch(loginSuccess({}));
-            navigate('/coming-soon');
+            dispatch(loginSuccess({ token: response.data.token }));
         } catch (error: any) {
             dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signInNotificationHeader'),
+                bodyText: error.response.status === 401 ? t('errors:incorrectCredentials') : undefined,
                 notificationKind: 'danger',
                 duration: 3000
             })(dispatch);
