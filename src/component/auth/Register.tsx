@@ -49,7 +49,7 @@ const Register = () => {
                 window.location.href = response.data.google_url;
             });
         } catch (error: any) {
-            console.error(error.message);
+            dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signInNotificationHeader'),
                 notificationKind: 'danger',
@@ -66,8 +66,6 @@ const Register = () => {
         const formComplete = verifyFormCompletion();
         if (!formComplete || user.status === 'loading') return;
 
-        dispatch(loginStart());
-
         try {
             await customAxios.post('user/register', {
                 firstName,
@@ -75,9 +73,14 @@ const Register = () => {
                 email,
                 password
             });
+            showNotificationWithDuration({
+                headerText: t('notifications:signUpNotificationHeader'),
+                bodyText: t('notifications:registrationSuccess'),
+                notificationKind: 'success',
+                duration: 10000
+            })(dispatch);
             navigate('/auth/login');
         } catch (error: any) {
-            dispatch(loginFailure(error.message));
             showNotificationWithDuration({
                 headerText: t('notifications:signUpNotificationHeader'),
                 notificationKind: 'danger',
