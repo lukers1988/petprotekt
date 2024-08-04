@@ -5,9 +5,12 @@ const getToken = (): string => {
 };
 
 const publicPaths =  ['/auth_check', '/auth/login/google', '/auth/login/google/callback', '/auth/register']
+const baseURL = import.meta.env.DEV
+    ? import.meta.env.VITE_LOCAL_API_URL
+    : import.meta.env.VITE_PROD_API_URL;
 
 const customAxios = axios.create({
-    baseURL: 'https://petprotekt.com/api'
+    baseURL
 });
 
 customAxios.interceptors.request.use(

@@ -26,7 +26,8 @@
         "signInNotificationHeader": "Sign In",
         "signUpNotificationHeader": "Registration",
         "mailingListNotificationHeader": "Mailing list",
-        "mailingListNotificationInfo": "Email address was added to the mailing list!"
+        "mailingListNotificationInfo": "Email address was added to the mailing list!",
+        "registrationSuccess": "Registration was successful. You can now use your credentials to log in."
     },
     "landingPage": {
         "joinCommunity": "Join the PetProtekt community",

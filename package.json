@@ -31,7 +31,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "firebase": "^10.12.2",
     "google-map-react": "^2.2.1",
     "i18next": "^23.11.5",
     "path": "^0.12.7",

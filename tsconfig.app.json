@@ -32,7 +32,8 @@
       "@appConst/*": ["const/*"],
       "@appHelpers/*": ["helpers/*"],
       "@appHooks/*": ["hooks/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"]
 }
