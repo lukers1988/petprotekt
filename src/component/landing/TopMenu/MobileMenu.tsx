@@ -13,7 +13,8 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
     return (
         <div
             style={{
-                width: '100%'
+                width: '100%',
+                zIndex: 200
             }}
         >
             <FontAwesomeIcon

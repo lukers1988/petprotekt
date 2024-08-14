@@ -78,5 +78,9 @@
         "hours": "hours",
         "minutes": "minutes",
         "launchingSoon": "Launching soon"
+    },
+    "languages": {
+        "pl-PL": "Polish",
+        "en-En": "English"
     }
 }

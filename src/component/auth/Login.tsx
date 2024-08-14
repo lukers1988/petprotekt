@@ -7,7 +7,7 @@ import customAxios from '@appConfig/customAxios';
 import TextInput from '@appComponents/inputs/TextInput';
 import DogIcon from '@appImages/dog.svg';
 import GoogleLoginIcon from '@appImages/google-login.svg';
-import FacebookLoginIcon from '@appImages/facebook-login.svg';
+// import FacebookLoginIcon from '@appImages/facebook-login.svg';
 import { useTranslation } from 'react-i18next';
 import { values } from 'ramda';
 import { Spinner } from 'react-bootstrap';
@@ -44,9 +44,9 @@ const Login = () => {
         }
     };
 
-    const handleFacebookLogin = async (): Promise<void> => {
-        console.info('NYI');
-    };
+    // const handleFacebookLogin = async (): Promise<void> => {
+    //     console.info('NYI');
+    // };
 
     const handleLogin = async (): Promise<void> => {
         const formComplete = verifyFormCompletion();
@@ -154,11 +154,11 @@ const Login = () => {
                             className="cursor-pointer"
                             onClick={handleGoogleLogin}
                         />
-                        <img
+                        {/* <img
                             src={FacebookLoginIcon}
                             className="cursor-pointer"
                             onClick={handleFacebookLogin}
-                        />
+                        /> */}
                     </div>
                     <div className="text-center mt-5">
                         <button

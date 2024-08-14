@@ -6,7 +6,7 @@ import { showNotificationWithDuration } from '@appStore/NotificationReducer';
 import TextInput from '@appComponents/inputs/TextInput';
 import DogIcon from '@appImages/dog.svg';
 import GoogleLoginIcon from '@appImages/google-login.svg';
-import FacebookLoginIcon from '@appImages/facebook-login.svg';
+// import FacebookLoginIcon from '@appImages/facebook-login.svg';
 import { useTranslation } from 'react-i18next';
 import { values } from 'ramda';
 import { Spinner } from 'react-bootstrap';
@@ -58,9 +58,9 @@ const Register = () => {
         }
     };
 
-    const handleFacebookRegister = async (): Promise<void> => {
-        console.info('NYI');
-    };
+    // const handleFacebookRegister = async (): Promise<void> => {
+    //     console.info('NYI');
+    // };
 
     const handleRegister = async (): Promise<void> => {
         const formComplete = verifyFormCompletion();
@@ -281,11 +281,11 @@ const Register = () => {
                             className="cursor-pointer"
                             onClick={handleGoogleRegister}
                         />
-                        <img
+                        {/* <img
                             src={FacebookLoginIcon}
                             className="cursor-pointer"
                             onClick={handleFacebookRegister}
-                        />
+                        /> */}
                     </div>
                     <div className="text-center mt-5">
                         <button
