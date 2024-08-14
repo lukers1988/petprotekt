@@ -13,8 +13,7 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
     return (
         <div
             style={{
-                width: '100%',
-                zIndex: 200
+                width: '100%'
             }}
         >
             <FontAwesomeIcon
@@ -25,48 +24,55 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                 }}
                 onClick={() => setMenuOpen((currentValue) => !currentValue)}
             />
-            {menuOpen && (
-                <ListGroup>
-                    {menuItems.map((item) => {
-                        const { label, target } = item;
-                        return (
-                            <ListGroup.Item
-                                key={label}
-                                style={{
-                                    backgroundColor: '#fff',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    height: 100
-                                }}
-                            >
-                                <div
-                                    key={target}
-                                    onClick={() => {
-                                        scrollToDiv(
-                                            target,
-                                            () => {
-                                                selectedSetter(target);
-                                            },
-                                            '/'
-                                        )(navigate);
-                                        setMenuOpen(false);
-                                    }}
+            <div
+                style={{
+                    zIndex: 200,
+                    position: 'relative'
+                }}
+            >
+                {menuOpen && (
+                    <ListGroup>
+                        {menuItems.map((item) => {
+                            const { label, target } = item;
+                            return (
+                                <ListGroup.Item
+                                    key={label}
                                     style={{
-                                        display: 'inline-block',
-                                        borderBottom:
-                                            selected === target ? 'solid 2px #FDC221' : 'none',
-                                        transition: 'border-bottom 0.3s ease-in-out',
-                                        height: 30
+                                        backgroundColor: '#fff',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        height: 100
                                     }}
                                 >
-                                    <h4>{label}</h4>
-                                </div>
-                            </ListGroup.Item>
-                        );
-                    })}
-                </ListGroup>
-            )}
+                                    <div
+                                        key={target}
+                                        onClick={() => {
+                                            scrollToDiv(
+                                                target,
+                                                () => {
+                                                    selectedSetter(target);
+                                                },
+                                                '/'
+                                            )(navigate);
+                                            setMenuOpen(false);
+                                        }}
+                                        style={{
+                                            display: 'inline-block',
+                                            borderBottom:
+                                                selected === target ? 'solid 2px #FDC221' : 'none',
+                                            transition: 'border-bottom 0.3s ease-in-out',
+                                            height: 30
+                                        }}
+                                    >
+                                        <h4>{label}</h4>
+                                    </div>
+                                </ListGroup.Item>
+                            );
+                        })}
+                    </ListGroup>
+                )}
+            </div>
         </div>
     );
 };
