@@ -44,9 +44,9 @@ const Login = () => {
         }
     };
 
-    const handleFacebookLogin = async (): Promise<void> => {
-        console.info('NYI');
-    };
+    // const handleFacebookLogin = async (): Promise<void> => {
+    //     console.info('NYI');
+    // };
 
     const handleLogin = async (): Promise<void> => {
         const formComplete = verifyFormCompletion();

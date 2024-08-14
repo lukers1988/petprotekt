@@ -58,9 +58,9 @@ const Register = () => {
         }
     };
 
-    const handleFacebookRegister = async (): Promise<void> => {
-        console.info('NYI');
-    };
+    // const handleFacebookRegister = async (): Promise<void> => {
+    //     console.info('NYI');
+    // };
 
     const handleRegister = async (): Promise<void> => {
         const formComplete = verifyFormCompletion();
