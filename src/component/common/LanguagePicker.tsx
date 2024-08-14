@@ -1,6 +1,7 @@
-import { DropdownButton, Dropdown } from 'react-bootstrap';
+import { DropdownButton } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import languages from '@appConst/languages';
+import DropdownItemMobile from '@appComponents/styled/DropdownItemMobile';
 
 const LanguagePicker = () => {
     const { t, i18n } = useTranslation();
@@ -8,37 +9,38 @@ const LanguagePicker = () => {
 
     return (
         <DropdownButton
-                title={
-                    <img
-                        style={{
-                            height: 20,
-                            width: 40
+            title={
+                <img
+                    style={{
+                        height: 20,
+                        width: 40
+                    }}
+                    src={chosenLanguage.flag}
+                />
+            }
+            size="sm"
+        >
+            {languages.map((language) => {
+                return (
+                    <DropdownItemMobile
+                        $breakpoint={425}
+                        onClick={() => {
+                            i18n.changeLanguage(language.id);
                         }}
-                        src={chosenLanguage.flag}
-                    />
-                }
-                size="sm"
-            >
-                {languages.map((language) => {
-                    return (
-                        <Dropdown.Item
-                            onClick={() => {
-                                i18n.changeLanguage(language.id);
+                    >
+                        <img
+                            style={{
+                                height: 20,
+                                width: 40,
+                                marginRight: 10
                             }}
-                        >
-                            <img
-                                style={{
-                                    height: 20,
-                                    width: 40,
-                                    marginRight: 10
-                                }}
-                                src={language.flag}
-                            />
-                            {t(`languages:${language.id}`)}
-                        </Dropdown.Item>
-                    );
-                })}
-            </DropdownButton>
+                            src={language.flag}
+                        />
+                        {t(`languages:${language.id}`)}
+                    </DropdownItemMobile>
+                );
+            })}
+        </DropdownButton>
     );
 };
 
