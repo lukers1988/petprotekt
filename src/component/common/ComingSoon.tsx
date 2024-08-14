@@ -1,4 +1,3 @@
-import { universalGreen } from '@appConst/colors';
 import Header from '@appComponents/landing/Header';
 import catImage from '@appImages/coming-soon-cat.svg';
 import DigitalClockFragment from './DigitalClockFragment';
@@ -7,6 +6,8 @@ import MobileContainerUnder from '@appComponents/styled/MobileContainerUnder';
 import SubscribeInput from '@appComponents/common/SubscribeInput';
 import ImageHiddenUnder from '@appComponents/styled/ImageHiddenUnder';
 import { useTranslation } from 'react-i18next';
+import ComingSoonContainer from '@appComponents/styled/ComingSoonContainer';
+import CreateContainerOver from '@appComponents/styled/CreateContainerOver';
 
 const ComingSoon = () => {
     const { t } = useTranslation();
@@ -43,19 +44,14 @@ const ComingSoon = () => {
     }, []);
 
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '100vh',
-                backgroundImage: `linear-gradient(to bottom, #fff, ${universalGreen})`,
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}
-        >
-            <Header />
+        <ComingSoonContainer>
+            <div
+                style={{
+                    marginBottom: 200
+                }}
+            >
+                <Header />
+            </div>
             <ImageHiddenUnder
                 $breakpoint={1000}
                 style={{
@@ -67,16 +63,24 @@ const ComingSoon = () => {
                 }}
                 src={catImage}
             />
-            <h1
+            <CreateContainerOver
+                $breakpoint={500}
+                $display="block"
                 style={{
-                    color: '#fff',
-                    marginBottom: 30,
-                    fontSize: 100,
                     zIndex: 20
                 }}
             >
-                {t('common:launchingSoon')}
-            </h1>
+                <h1
+                    style={{
+                        color: '#fff',
+                        marginBottom: 30,
+                        fontSize: 100,
+                        textAlign: 'center'
+                    }}
+                >
+                    {t('common:launchingSoon')}
+                </h1>
+            </CreateContainerOver>
             <MobileContainerUnder
                 $breakpoint={1000}
                 style={{
@@ -115,7 +119,7 @@ const ComingSoon = () => {
                     label={t('landingPage:launchInfo')}
                 />
             </div>
-        </div>
+        </ComingSoonContainer>
     );
 };
 

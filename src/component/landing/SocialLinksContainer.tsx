@@ -1,6 +1,7 @@
 import frame from '@appImages/social-frame.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import LanguagePicker from '@appComponents/common/LanguagePicker';
 
 const SocialLinksContainer = () => {
     const socialsList = [
@@ -59,6 +60,7 @@ const SocialLinksContainer = () => {
                     </div>
                 );
             })}
+            <LanguagePicker />
         </div>
     );
 };

@@ -61,7 +61,7 @@ const TopMenu = () => {
                 width: '90%'
             }}
         >
-            {screenWidth > 580 ? (
+            {screenWidth > 670 ? (
                 <DefaultMenu
                     menuItems={menuItems}
                     selected={selected}
