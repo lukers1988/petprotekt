@@ -23,7 +23,7 @@ const LanguagePicker = () => {
             {languages.map((language) => {
                 return (
                     <DropdownItemMobile
-                        $breakpoint={425}
+                        $breakpoint={430}
                         onClick={() => {
                             i18n.changeLanguage(language.id);
                         }}
