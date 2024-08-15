@@ -7,15 +7,15 @@ const SocialLinksContainer = () => {
     const socialsList = [
         {
             icon: faFacebookF,
-            link: 'https://www.facebook.com/petprotekt'
+            link: 'https://www.facebook.com/groups/2792815504223806'
         },
         {
             icon: faLinkedinIn,
-            link: 'https://www.linkedin.com/petprotekt'
+            link: 'https://www.linkedin.com/company/petprotekt/'
         },
         {
             icon: faInstagram,
-            link: 'https://www.instagram.com/petprotekt'
+            link: 'https://www.instagram.com/pet.protekt/'
         }
     ];
 
