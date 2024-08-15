@@ -1,9 +1,10 @@
-import { useSelector } from 'react-redux';
 import { Outlet, Navigate } from 'react-router';
 import { isNil } from 'ramda';
+import getToken from '@appHooks/getToken';
 
 const Auth = () => {
-    const token = useSelector((state: any) => state?.user?.user?.token);
+    const token = getToken();
+    
     return <>{!isNil(token) ? <Navigate to={'/coming-soon'} /> : <Outlet />}</>;
 };
 

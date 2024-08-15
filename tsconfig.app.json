@@ -31,7 +31,8 @@
       "@appInterfaces/*": ["interfaces/*"],
       "@appConst/*": ["const/*"],
       "@appHelpers/*": ["helpers/*"],
-      "@appHooks/*": ["hooks/*"]
+      "@appHooks/*": ["hooks/*"],
+      "@appRoutes/*": ["routes/*"]
     },
     "allowSyntheticDefaultImports": true
   },

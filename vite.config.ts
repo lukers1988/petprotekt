@@ -14,7 +14,8 @@ export default defineConfig({
             '@appInterfaces': path.resolve(__dirname, './src/interfaces'),
             '@appConst': path.resolve(__dirname, './src/const/'),
             '@appHelpers': path.resolve(__dirname, './src/helpers/'),
-            '@appHooks': path.resolve(__dirname, './src/hooks/')
+            '@appHooks': path.resolve(__dirname, './src/hooks/'),
+            '@appRoutes': path.resolve(__dirname, './src/routes/')
         }
     },
     server: {
