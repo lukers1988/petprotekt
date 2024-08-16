@@ -82,5 +82,8 @@
     "languages": {
         "pl-PL": "Polish",
         "en-En": "English"
+    },
+    "sideMenu": {
+        "addPet": "Add your pet"
     }
 }

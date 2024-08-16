@@ -82,5 +82,8 @@
     "languages": {
         "pl-PL": "polski",
         "en-En": "angielski"
+    },
+    "sideMenu": {
+        "addPet": "Dodaj swojego Pupila"
     }
 }
