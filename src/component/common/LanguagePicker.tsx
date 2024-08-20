@@ -6,6 +6,7 @@ import DropdownItemMobile from '@appComponents/styled/DropdownItemMobile';
 const LanguagePicker = () => {
     const { t, i18n } = useTranslation();
     const chosenLanguage = languages.find((language) => language.id === i18n.language)!;
+    console.log('LANGUAGE DETECTION: ', i18n.language);
 
     return (
         <DropdownButton
