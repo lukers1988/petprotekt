@@ -1,12 +1,7 @@
-// AppBaseStyles.tsx
 import styled from 'styled-components';
 
 export const AppContainer = styled.div`
     height: 100vh;
-`;
-
-export const HeaderContainer = styled.div`
-    height: 100px;
 `;
 
 export const MainContent = styled.div`
