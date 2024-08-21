@@ -8,7 +8,8 @@
         "signIn": "Zaloguj się",
         "repeatPassword": "Powtórz hasło",
         "firstName": "Imię",
-        "lastName": "Nazwisko"
+        "lastName": "Nazwisko",
+        "logout": "Wyloguj się"
     },
     "errors": {
         "defaultError": "Coś poszło nie tak, spróbuj ponownie później.",
@@ -77,10 +78,14 @@
         "days": "dni",
         "hours": "godzin",
         "minutes": "minut",
-        "launchingSoon": "Wkrótce startujemy"
+        "launchingSoon": "Wkrótce startujemy",
+        "greeting": "Witaj"
     },
     "languages": {
         "pl-PL": "polski",
         "en-En": "angielski"
+    },
+    "sideMenu": {
+        "addPet": "Dodaj swojego Pupila"
     }
 }

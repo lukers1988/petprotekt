@@ -6,7 +6,7 @@ import WhyChoose from '@appComponents/landing/WhyChoose';
 import Contact from '@appComponents/landing/Contact';
 import Header from '@appComponents/landing/Header';
 import TopScrollButton from '@appComponents/common/TopScrollButton';
-import { useLocation } from 'react-router'; 
+import { useLocation } from 'react-router';
 import { useEffect } from 'react';
 
 const LandingPageBase = () => {
@@ -25,6 +25,8 @@ const LandingPageBase = () => {
     return (
         <div
             style={{
+                maxWidth: 1440,
+                margin: 'auto',
                 position: 'relative'
             }}
         >

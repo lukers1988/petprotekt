@@ -17,15 +17,8 @@ import 'slick-carousel/slick/slick-theme.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
         <PrimeReactProvider>
-            <div
-                style={{
-                    maxWidth: 1440,
-                    margin: 'auto'
-                }}
-            >
-                <MainRoutes />
-                <NotificationCenter />
-            </div>
+            <MainRoutes />
+            <NotificationCenter />
         </PrimeReactProvider>
     </Provider>
 );
