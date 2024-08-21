@@ -2,7 +2,7 @@ import LinkItem from '@appComponents/app/SideMenu/LinkItem';
 import {
     SideMenuContainer,
     MenuItemContainer
-} from '@appComponents/app/SideMenu/styled/SideMenuBaseStyled';
+} from '@appComponents/app/SideMenu/styles/SideMenuBaseStyled';
 import SideMenuItems from '@appComponents/app/SideMenu/data/SideMenuItems';
 import { MenuItemType, MenuItemInterface } from '@appComponents/app/SideMenu/types/SharedTypes';
 

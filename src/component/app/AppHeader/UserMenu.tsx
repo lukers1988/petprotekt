@@ -5,7 +5,7 @@ import {
   GreetingContainer,
   ProfileDropdownMenuContainer,
   DowndropMenuItem
-} from '@appComponents/app/AppHeader/styled/UserMenuStyles';
+} from '@appComponents/app/AppHeader/styles/UserMenuStyles';
 import placeholderAvatar from '@appImages/placeholder-user-avatar.png';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

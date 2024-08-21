@@ -1,7 +1,7 @@
 import {
     StyledLink,
     StyledFontAwesomeIcon
-} from '@appComponents/app/SideMenu/styled/LinkItemStyles';
+} from '@appComponents/app/SideMenu/styles/LinkItemStyles';
 import { MenuItemInterface } from '@appComponents/app/SideMenu/types/SharedTypes';
 import { useTranslation } from 'react-i18next';
 

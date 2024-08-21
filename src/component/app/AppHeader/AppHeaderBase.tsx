@@ -1,7 +1,7 @@
 import {
   HeaderContainer,
   LogoContainer
-} from '@appComponents/app/AppHeader/styled/AppHeaderBaseStyles';
+} from '@appComponents/app/AppHeader/styles/AppHeaderBaseStyles';
 import DogIcon from '@appImages/dog.svg';
 import { useNavigate } from 'react-router';
 import UserMenu from '@appComponents/app/AppHeader/UserMenu';
