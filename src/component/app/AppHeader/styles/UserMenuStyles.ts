@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Dropdown } from 'react-bootstrap';
 
 export const ProfileMenuToggle = styled(Dropdown.Toggle)`
-  /* width: 200px; */
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -14,7 +13,7 @@ export const ProfileMenuToggle = styled(Dropdown.Toggle)`
 `;
 
 export const ProfileDropdownContainer = styled(Dropdown)`
-  margin-right: 20px;
+  margin-right: 10px;
 `;
 
 export const UserAvatar = styled.img`

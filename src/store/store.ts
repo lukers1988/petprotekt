@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import UserReducer from './UserReducer';
 import NotificationReducer from './NotificationReducer';
 import PetsReducer from './PetsReducer';
+import AppSettingsReducer from './AppSettingsReducer';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
@@ -13,7 +14,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   user: UserReducer,
   notifications: NotificationReducer,
-  petList: PetsReducer
+  petList: PetsReducer,
+  appSettings: AppSettingsReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
