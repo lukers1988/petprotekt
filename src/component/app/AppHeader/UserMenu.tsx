@@ -14,25 +14,29 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { RootStateType } from '@appStore/store';
 import { path } from 'ramda';
+import useScreenWidth from '@appHooks/useScreenWidth';
 
 const UserMenu = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isMobile = useScreenWidth(768);
 
   const username = useSelector((state: RootStateType) =>
     path(['user', 'user', 'firstName'], state)
   );
-
+ 
   return (
     <ProfileDropdownContainer>
       <ProfileMenuToggle>
         {/* TODO - set user evetar */}
         <UserAvatar src={placeholderAvatar} />
-        <GreetingContainer>
-          {/* TODO - set username */}
-          {`${t('common:greeting')}`}, <strong>{username || 'User'}</strong>
-        </GreetingContainer>
+        {!isMobile && (
+          <GreetingContainer>
+            {/* TODO - set username */}
+            {`${t('common:greeting')}`}, <strong>{username || 'User'}</strong>
+          </GreetingContainer>
+        )}
       </ProfileMenuToggle>
       <ProfileDropdownMenuContainer>
         {userMenuItems.map((item) => (

@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
-const useScreenWidth = () => {
-    const [width, setWidth] = useState(window.innerWidth);
+const useScreenWidth = (inputWidth?: number) => {
+  const [width, setWidth] = useState(window.innerWidth);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWidth(window.innerWidth);
-        };
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
 
-        window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-    return width;
+  return inputWidth ? inputWidth > width : width;
 };
 
 export default useScreenWidth;

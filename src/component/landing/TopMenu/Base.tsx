@@ -9,72 +9,64 @@ const TopMenu = () => {
     const { t } = useTranslation();
     const [selected, setSelected] = useState('');
     const [scrollPosition, setScrollPosition] = useState(0);
-    const screenWidth = useScreenWidth();
+    const isMobile = useScreenWidth(670);
 
     const menuItems = [
-        {
-            label: t('landingPage:homeMenuLabel'),
-            target: 'home'
-        },
-        {
-            label: t('landingPage:aboutUsMenuLabel'),
-            target: 'about-us'
-        },
-        {
-            label: t('landingPage:servicesMenuLabel'),
-            target: 'services'
-        },
-        {
-            label: t('landingPage:contactMenuLabel'),
-            target: 'contact'
-        }
+      {
+        label: t('landingPage:homeMenuLabel'),
+        target: 'home'
+      },
+      {
+        label: t('landingPage:aboutUsMenuLabel'),
+        target: 'about-us'
+      },
+      {
+        label: t('landingPage:servicesMenuLabel'),
+        target: 'services'
+      },
+      {
+        label: t('landingPage:contactMenuLabel'),
+        target: 'contact'
+      }
     ];
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosition(window.scrollY);
-        };
+      const handleScroll = () => {
+        setScrollPosition(window.scrollY);
+      };
 
-        window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }, []);
 
     useEffect(() => {
-        if (scrollPosition < 100 && endsWith('/', window.location.href)) {
-            setSelected('home');
-        }
+      if (scrollPosition < 100 && endsWith('/', window.location.href)) {
+        setSelected('home');
+      }
     }, [scrollPosition]);
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 30,
-                position: 'absolute',
-                left: 30,
-                top: 10,
-                cursor: 'pointer',
-                width: '90%'
-            }}
-        >
-            {screenWidth > 670 ? (
-                <DefaultMenu
-                    menuItems={menuItems}
-                    selected={selected}
-                    selectedSetter={setSelected}
-                />
-            ) : (
-                <MobileMenu
-                    menuItems={menuItems}
-                    selected={selected}
-                    selectedSetter={setSelected}
-                />
-            )}
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: 30,
+          position: 'absolute',
+          left: 30,
+          top: 10,
+          cursor: 'pointer',
+          width: '90%'
+        }}
+      >
+        {isMobile ? (
+          <DefaultMenu menuItems={menuItems} selected={selected} selectedSetter={setSelected} />
+        ) : (
+          <MobileMenu menuItems={menuItems} selected={selected} selectedSetter={setSelected} />
+        )}
+      </div>
     );
 };
 

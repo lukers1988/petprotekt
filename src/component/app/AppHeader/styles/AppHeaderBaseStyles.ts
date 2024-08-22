@@ -14,12 +14,15 @@ export const LogoContainer = styled.div`
   gap: 10px;
   margin-left: 45px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+  }
 `;
 
 export const SettingsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-right: 30px;
   align-items: center;
 `;

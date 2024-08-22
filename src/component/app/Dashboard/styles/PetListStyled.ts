@@ -2,7 +2,7 @@ import { Card, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
 export const PetContainer = styled(Card)`
-  min-width: 320px;
+  min-width: 290px;
   height: 200px;
   cursor: pointer;
   position: relative;
