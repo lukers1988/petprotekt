@@ -1,10 +1,11 @@
 import AppBase from '@appComponents/app/AppBase';
-import { Outlet } from 'react-router';
+import getToken from '@appHooks/getToken';
+import { Navigate, Outlet } from 'react-router';
 
-const App = () => (
-    <AppBase>
-        <Outlet />
-    </AppBase>
-);
+const App = () => {
+  const token = getToken();
+
+  return <AppBase>{token ? <Outlet /> : <Navigate to={'/'} />}</AppBase>;
+};
 
 export default App;

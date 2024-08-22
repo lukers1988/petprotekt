@@ -8,7 +8,8 @@
         "signIn": "Sign In",
         "repeatPassword": "Repeat password",
         "firstName": "First name",
-        "lastName": "Last name"
+        "lastName": "Last name",
+        "logout": "Log Out"
     },
     "errors": {
         "defaultError": "Something went wrong, try again later.",
@@ -27,7 +28,8 @@
         "signUpNotificationHeader": "Registration",
         "mailingListNotificationHeader": "Mailing list",
         "mailingListNotificationInfo": "Email address was added to the mailing list!",
-        "registrationSuccess": "Registration was successful. You can now use your credentials to log in."
+        "registrationSuccess": "Registration was successful. You can now use your credentials to log in.",
+        "petRegistration": "Pet registration"
     },
     "landingPage": {
         "joinCommunity": "Join the PetProtekt community",
@@ -77,10 +79,28 @@
         "days": "days",
         "hours": "hours",
         "minutes": "minutes",
-        "launchingSoon": "Launching soon"
+        "launchingSoon": "Launching soon",
+        "greeting": "Hello",
+        "months": "months",
+        "years": "years"
     },
     "languages": {
         "pl-PL": "Polish",
         "en-En": "English"
+    },
+    "sideMenu": {
+        "addPet": "Add your pet"
+    },
+    "petAddition": {
+        "name": "Name",
+        "species": "Species",
+        "birthDate": "Birth date",
+        "add": "Add",
+        "nameRequired": "Name is required",
+        "speciesRequired": "Species is required",
+        "birthDateRequired": "Birth date is required",
+        "dog": "Dog",
+        "cat": "Cat",
+        "age": "Age"
     }
 }

@@ -5,7 +5,15 @@ import getToken from '@appHooks/getToken';
 const Auth = () => {
     const token = getToken();
     
-    return <>{!isNil(token) ? <Navigate to={'/coming-soon'} /> : <Outlet />}</>;
+    return (
+      <>
+        {!isNil(token) ? (
+          <Navigate to={import.meta.env.DEV ? 'app/dashboard' : '/coming-soon'} />
+        ) : (
+          <Outlet />
+        )}
+      </>
+    );
 };
 
 export default Auth;
