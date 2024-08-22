@@ -1,8 +1,8 @@
-import store from '@appStore/store';
+import { store } from '@appStore/store';
 import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { path } from 'ramda';
 
-const getToken = (): string | null => {
+const getToken = (): string | null | undefined => {
   const state = store.getState();
   return path(['user', 'user', 'token'], state);
 };
