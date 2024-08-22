@@ -10,8 +10,8 @@ export const MainContent = styled.div`
 `;
 
 export const ContentArea = styled.div`
-  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
   width: 100%;
-  background-color: #00000020;
   padding: 20px;
+  overflow-y: scroll;
 `;

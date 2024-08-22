@@ -10,13 +10,19 @@ import placeholderAvatar from '@appImages/placeholder-user-avatar.png';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import userMenuItems from '@appComponents/app/AppHeader/data/UserManuItems';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
+import { RootStateType } from '@appStore/store';
+import { path } from 'ramda';
 
 const UserMenu = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const username = useSelector((state: RootStateType) =>
+    path(['user', 'user', 'firstName'], state)
+  );
 
   return (
     <ProfileDropdownContainer>
@@ -25,7 +31,7 @@ const UserMenu = () => {
         <UserAvatar src={placeholderAvatar} />
         <GreetingContainer>
           {/* TODO - set username */}
-          {`${t('common:greeting')}`}, <strong>User</strong>
+          {`${t('common:greeting')}`}, <strong>{username || 'User'}</strong>
         </GreetingContainer>
       </ProfileMenuToggle>
       <ProfileDropdownMenuContainer>

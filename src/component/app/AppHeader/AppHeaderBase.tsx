@@ -1,17 +1,19 @@
 import {
   HeaderContainer,
-  LogoContainer
+  LogoContainer,
+  SettingsContainer
 } from '@appComponents/app/AppHeader/styles/AppHeaderBaseStyles';
 import DogIcon from '@appImages/dog.svg';
 import { useNavigate } from 'react-router';
 import UserMenu from '@appComponents/app/AppHeader/UserMenu';
+import LanguagePicker from '@appComponents/common/LanguagePicker';
 
 const AppHeaderBase = () => {
   const navigate = useNavigate();
 
   return (
     <HeaderContainer>
-      <LogoContainer>
+      <LogoContainer onClick={() => navigate('/app/dashboard')}>
         <img
           src={DogIcon}
           alt=""
@@ -25,7 +27,10 @@ const AppHeaderBase = () => {
         />
         <h2>PetProtekt</h2>
       </LogoContainer>
-      <UserMenu />
+      <SettingsContainer>
+        <LanguagePicker />
+        <UserMenu />
+      </SettingsContainer>
     </HeaderContainer>
   );
 };

@@ -28,7 +28,8 @@
         "signUpNotificationHeader": "Registration",
         "mailingListNotificationHeader": "Mailing list",
         "mailingListNotificationInfo": "Email address was added to the mailing list!",
-        "registrationSuccess": "Registration was successful. You can now use your credentials to log in."
+        "registrationSuccess": "Registration was successful. You can now use your credentials to log in.",
+        "petRegistration": "Pet registration"
     },
     "landingPage": {
         "joinCommunity": "Join the PetProtekt community",
@@ -79,7 +80,9 @@
         "hours": "hours",
         "minutes": "minutes",
         "launchingSoon": "Launching soon",
-        "greeting": "Hello"
+        "greeting": "Hello",
+        "months": "months",
+        "years": "years"
     },
     "languages": {
         "pl-PL": "Polish",
@@ -87,5 +90,17 @@
     },
     "sideMenu": {
         "addPet": "Add your pet"
+    },
+    "petAddition": {
+        "name": "Name",
+        "species": "Species",
+        "birthDate": "Birth date",
+        "add": "Add",
+        "nameRequired": "Name is required",
+        "speciesRequired": "Species is required",
+        "birthDateRequired": "Birth date is required",
+        "dog": "Dog",
+        "cat": "Cat",
+        "age": "Age"
     }
 }

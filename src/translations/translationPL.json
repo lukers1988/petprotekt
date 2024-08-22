@@ -28,7 +28,8 @@
         "signUpNotificationHeader": "Rejestracja",
         "mailingListNotificationHeader": "Lista mailingowa",
         "mailingListNotificationInfo": "Adres email został dodany do listy mailingowej!",
-        "registrationSuccess": "Rejestrecja przebegła pomyslnie. Możesz teraz uzyć swoich danych do zalogowania się."
+        "registrationSuccess": "Rejestrecja przebegła pomyslnie. Możesz teraz uzyć swoich danych do zalogowania się.",
+        "petRegistration": "Rejestracja pupila"
     },
     "landingPage": {
         "joinCommunity": "Dołącz do społeczności PetProtekt",
@@ -79,7 +80,9 @@
         "hours": "godzin",
         "minutes": "minut",
         "launchingSoon": "Wkrótce startujemy",
-        "greeting": "Witaj"
+        "greeting": "Witaj",
+        "months": "miesięcy",
+        "years": " lat"
     },
     "languages": {
         "pl-PL": "polski",
@@ -87,5 +90,17 @@
     },
     "sideMenu": {
         "addPet": "Dodaj swojego Pupila"
+    },
+    "petAddition": {
+        "name": "Imię",
+        "species": "Gatunek",
+        "birthDate": "Data urodzenia",
+        "add": "Dodaj",
+        "nameRequired": "Imię jest wymagane",
+        "speciesRequired": "Gatunek jest wymagany",
+        "birthDateRequired": "Data urodzenia jest wymagana",
+        "dog": "Pies",
+        "cat": "Kot",
+        "age": "Wiek"
     }
 }

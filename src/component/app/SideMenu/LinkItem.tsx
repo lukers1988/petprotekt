@@ -8,13 +8,13 @@ import { useTranslation } from 'react-i18next';
 const LinkItem = ({ item }: { item: MenuItemInterface }) => {
     const { t } = useTranslation();
 
-    const { icon, label, destination } = item;
+    const { icon, label, destination, location } = item;
 
     return (
-        <StyledLink to={destination}>
-            <StyledFontAwesomeIcon size="2x" icon={icon} />
-            <span className="nav-text">{t(`sideMenu:${label}`)}</span>
-        </StyledLink>
+      <StyledLink to={destination} active={location?.pathname === destination}>
+        <StyledFontAwesomeIcon size="2x" icon={icon} />
+        <span className="nav-text">{t(`sideMenu:${label}`)}</span>
+      </StyledLink>
     );
 };
 

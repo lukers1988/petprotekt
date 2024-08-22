@@ -28,6 +28,7 @@ const LanguagePicker = () => {
             onClick={() => {
               i18n.changeLanguage(language.id);
             }}
+            key={language.id}
           >
             <img
               style={{

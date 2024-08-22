@@ -5,30 +5,30 @@ import {
 } from '@appComponents/app/SideMenu/styles/SideMenuBaseStyled';
 import SideMenuItems from '@appComponents/app/SideMenu/data/SideMenuItems';
 import { MenuItemType, MenuItemInterface } from '@appComponents/app/SideMenu/types/SharedTypes';
+import { useLocation } from 'react-router';
 
 const SideMenuBase = () => {
-    const menuItemsTypeMap: Record<
-        MenuItemType,
-        React.ComponentType<{ item: MenuItemInterface }>
-    > = {
-        link: LinkItem,
-        // TODO: Add CollapseItem
-        collapse: LinkItem
-    };
+  const location = useLocation();
 
-    return (
-        <SideMenuContainer>
-            {SideMenuItems.map((item) => {
-                const MenuItem = menuItemsTypeMap[item.type];
+  const menuItemsTypeMap: Record<MenuItemType, React.ComponentType<{ item: MenuItemInterface }>> = {
+    link: LinkItem,
+    // TODO: Add CollapseItem
+    collapse: LinkItem
+  };
 
-                return (
-                    <MenuItemContainer key={item.id}>
-                        <MenuItem item={item} />
-                    </MenuItemContainer>
-                );
-            })}
-        </SideMenuContainer>
-    );
+  return (
+    <SideMenuContainer>
+      {SideMenuItems.map((item) => {
+        const MenuItem = menuItemsTypeMap[item.type];
+
+        return (
+          <MenuItemContainer key={item.id}>
+            <MenuItem item={{ ...item, location }} />
+          </MenuItemContainer>
+        );
+      })}
+    </SideMenuContainer>
+  );
 };
 
 export default SideMenuBase;

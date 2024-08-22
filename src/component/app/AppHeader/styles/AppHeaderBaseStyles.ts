@@ -12,6 +12,14 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  margin-left: 20px;
+  margin-left: 45px;
   cursor: pointer;
+`;
+
+export const SettingsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-right: 30px;
+  align-items: center;
 `;
