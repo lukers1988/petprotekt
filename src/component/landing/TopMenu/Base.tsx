@@ -61,7 +61,7 @@ const TopMenu = () => {
           width: '90%'
         }}
       >
-        {isMobile ? (
+        {!isMobile ? (
           <DefaultMenu menuItems={menuItems} selected={selected} selectedSetter={setSelected} />
         ) : (
           <MobileMenu menuItems={menuItems} selected={selected} selectedSetter={setSelected} />
