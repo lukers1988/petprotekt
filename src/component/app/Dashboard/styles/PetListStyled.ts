@@ -12,13 +12,20 @@ export const PetContainer = styled(Card)`
 `;
 
 export const PetPhoto = styled(Card.Img)`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 `;
 
 export const PetColumn = styled(Col)`
   max-width: 350px;
 `;
+
+export const PetCardBody = styled(Card.Body)`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const PetInfoContainer = styled.div`
+  max-width: 170px;
+`;
+

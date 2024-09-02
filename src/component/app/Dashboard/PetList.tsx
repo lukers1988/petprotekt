@@ -3,7 +3,9 @@ import { Card, Container, Row } from 'react-bootstrap';
 import {
   PetContainer,
   PetPhoto,
-  PetColumn
+  PetColumn,
+  PetCardBody,
+  PetInfoContainer
 } from '@appComponents/app/Dashboard/styles/PetListStyled';
 import customAxios from '@appConfig/customAxios';
 import { path } from 'ramda';
@@ -57,17 +59,19 @@ const PetList: React.FC = () => {
         {petList.map((pet) => (
           <PetColumn key={pet.id}>
             <PetContainer>
-              <Card.Body>
-                <Card.Title>{pet.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  {t(`petAddition:${pet.race}`)}
-                </Card.Subtitle>
-                <Card.Text>{`${t('petAddition:age')} ${pet.birthDate}`}</Card.Text>
+              <PetCardBody>
+                <PetInfoContainer>
+                  <Card.Title>{pet.name}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {t(`petAddition:${pet.race}`)}
+                  </Card.Subtitle>
+                  <Card.Text>{`${t('petAddition:age')}: ${pet.birthDate}`}</Card.Text>
+                </PetInfoContainer>
                 <PetPhoto
                   src={PetPhotoPlaceholders[pet.race as keyof typeof PetPhotoPlaceholders]}
                   alt={pet.name}
                 ></PetPhoto>
-              </Card.Body>
+              </PetCardBody>
             </PetContainer>
           </PetColumn>
         ))}
