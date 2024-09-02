@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import AppSettingsInterface from '@appInterfaces/AppSettingsInterface';
 
 const petsListState: AppSettingsInterface = {
-  sideMenuOpen: false
+  sideMenuOpen: false,
+  blogMenuOpen: false
 };
 
 const appSettingsSlice = createSlice({
@@ -11,10 +12,13 @@ const appSettingsSlice = createSlice({
   reducers: {
     toggleSideMenu: (state) => {
       state.sideMenuOpen = !state.sideMenuOpen;
+    },
+    toggleBlogMenu: (state) => {
+      state.blogMenuOpen = !state.blogMenuOpen;
     }
   }
 });
 
-export const { toggleSideMenu } = appSettingsSlice.actions;
+export const { toggleSideMenu, toggleBlogMenu } = appSettingsSlice.actions;
 
 export default appSettingsSlice.reducer;

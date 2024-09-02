@@ -103,5 +103,8 @@
         "dog": "Pies",
         "cat": "Kot",
         "age": "Wiek"
+    },
+    "blog": {
+        "popularArticles": "Popularne artykuły"
     }
 }
