@@ -9,7 +9,7 @@ const TopMenu = () => {
     const { t } = useTranslation();
     const [selected, setSelected] = useState('');
     const [scrollPosition, setScrollPosition] = useState(0);
-    const isMobile = useScreenWidth(670);
+    const isMobile = useScreenWidth(735);
 
     const menuItems = [
       {
@@ -27,6 +27,11 @@ const TopMenu = () => {
       {
         label: t('landingPage:contactMenuLabel'),
         target: 'contact'
+      },
+      {
+        label: t('landingPage:blogMenuLabel'),
+        target: 'blog',
+        targetUrl: '/blog'
       }
     ];
 
@@ -57,7 +62,6 @@ const TopMenu = () => {
           position: 'absolute',
           left: 30,
           top: 10,
-          cursor: 'pointer',
           width: '90%'
         }}
       >

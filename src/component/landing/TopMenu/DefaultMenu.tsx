@@ -6,7 +6,7 @@ const DefaultManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterf
     const navigate = useNavigate();
 
     return menuItems.map((item) => {
-        const { label, target } = item;
+        const { label, target, targetUrl } = item;
         return (
             <div
                 key={target}
@@ -16,12 +16,13 @@ const DefaultManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterf
                         () => {
                             selectedSetter(target);
                         },
-                        '/'
+                        targetUrl || '/'
                     )(navigate)
                 }
                 style={{
                     borderBottom: selected === target ? 'solid 2px #FDC221' : 'none',
-                    transition: 'border-bottom 0.3s ease-in-out'
+                    transition: 'border-bottom 0.3s ease-in-out',
+                    cursor: 'pointer'
                 }}
             >
                 <h4>{label}</h4>

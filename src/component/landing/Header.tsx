@@ -11,7 +11,7 @@ const Header = () => {
             }}
         >
             <TopMenu />
-            <CreateContainerOver $breakpoint={1000} $display="block">
+            <CreateContainerOver $breakpoint={1095} $display="block">
                 <h1
                     style={{
                         display: 'inline',

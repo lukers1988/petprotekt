@@ -33,7 +33,7 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                 {menuOpen && (
                     <ListGroup>
                         {menuItems.map((item) => {
-                            const { label, target } = item;
+                            const { label, target, targetUrl } = item;
                             return (
                                 <ListGroup.Item
                                     key={label}
@@ -42,7 +42,8 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                                         display: 'flex',
                                         justifyContent: 'center',
                                         alignItems: 'center',
-                                        height: 100
+                                        height: 100,
+                                        cursor: 'pointer'
                                     }}
                                 >
                                     <div
@@ -53,7 +54,7 @@ const MobileManu = ({ menuItems, selected, selectedSetter }: LandingtMenuInterfa
                                                 () => {
                                                     selectedSetter(target);
                                                 },
-                                                '/'
+                                                targetUrl || '/'
                                             )(navigate);
                                             setMenuOpen(false);
                                         }}

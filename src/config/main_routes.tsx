@@ -9,6 +9,7 @@ import App from '@appRoutes/App';
 import DashboardBase from '@appComponents/app/Dashboard/DashboardBase';
 import FallBackRoute from '@appRoutes/FallbackRoute';
 import AddPetForm from '@appComponents/app/AddPetForm';
+import Blog from '@appRoutes/Blog';
 
 const MainRoutes = () => (
   <Router>
@@ -25,6 +26,7 @@ const MainRoutes = () => (
         <Route path="dashboard" element={<DashboardBase />} />
         <Route path="add-pet" element={<AddPetForm />} />
       </Route>
+      <Route path="/blog" element={<Blog />} />
     </Routes>
   </Router>
 );

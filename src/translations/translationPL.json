@@ -73,7 +73,8 @@
         "aboutUsMenuLabel": "O nas",
         "servicesMenuLabel": "Usługi",
         "contactMenuLabel": "Kontakt",
-        "launchInfo": "Poinformujemy Cię, gdy będziemy rozpoczynać"
+        "launchInfo": "Poinformujemy Cię, gdy będziemy rozpoczynać",
+        "blogMenuLabel": "Blog"
     },
     "common": {
         "days": "dni",
