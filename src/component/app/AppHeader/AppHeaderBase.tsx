@@ -33,7 +33,7 @@ const AppHeaderBase = () => {
           }}
         />
         {!isMobile ? (
-          <h2>PetProtekt</h2>
+          <h2>Petsmay</h2>
         ) : (
           <FontAwesomeIcon
             icon={faBars}

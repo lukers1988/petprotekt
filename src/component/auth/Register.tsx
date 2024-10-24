@@ -181,7 +181,7 @@ const Register = () => {
                                 height: 60
                             }}
                         />
-                        <h1>PetProtekt</h1>
+                        <h1>Petsmay</h1>
                     </div>
                     <TextInput
                         label={t('auth:firstName')}

@@ -21,7 +21,7 @@ const Header = () => {
                         transform: 'translateX(-50%)'
                     }}
                 >
-                    <strong>PetProtekt</strong>
+                    <strong>Petsmay</strong>
                 </h1>
             </CreateContainerOver>
             <SocialLinksContainer />
