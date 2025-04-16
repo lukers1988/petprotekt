@@ -21,7 +21,7 @@
         "passwordsMatch": "Passwords must match",
         "firstNameRequired": "First name is required",
         "lastNameRequired": "Last name is required",
-        "incorrectCredentials": "Icorrect credentials"
+        "incorrectCredentials": "Incorrect credentials"
     },
     "notifications": {
         "signInNotificationHeader": "Sign In",
@@ -78,18 +78,27 @@
     "common": {
         "days": "days",
         "hours": "hours",
-        "minutes": "minutes",
         "launchingSoon": "Launching soon",
         "greeting": "Hello",
         "months": "months",
-        "years": "years"
+        "years": "years",
+        "companyName": "PetsMay",
+        "add": "Add",
+        "minutes": "minute(s)",
+        "searchProduct": "Search product"
     },
     "languages": {
         "pl-PL": "Polish",
         "en-En": "English"
     },
     "sideMenu": {
-        "addPet": "Add your pet"
+        "addPet": "Add your pet",
+        "yourPets": "Your pets",
+        "overview": "Overview",
+        "analytics": "Analytics",
+        "askADoctor": "Ask a doctor",
+        "settings": "Settings",
+        "logOut": "Log out"
     },
     "petAddition": {
         "name": "Name",
@@ -102,5 +111,30 @@
         "dog": "Dog",
         "cat": "Cat",
         "age": "Age"
+    },
+    "petProfile": {
+        "petProfile": "Pet profile",
+        "appearanceHeader": "Appearance and distinctive signs",
+        "gender": "Gender",
+        "size": "Size",
+        "weight": "Weight",
+        "importantDates": "Important Dates",
+        "yearsOld": "year(s) old",
+        "birthday": "birthday",
+        "adoption": "adoption",
+        "caretakers": "Caretakers"
+    },
+    "recipes": {
+        "recipes": "Recipes",
+        "addRecipes": "Add new recipes",
+        "foodJournal": "Food Journal",
+        "scheduledMeals": "Scheduled Meals",
+        "learnNext": "Learn next"
+    },
+    "activities": {
+        "walks": "Walks",
+        "tricks": "Tricks",
+        "otherActivities": "Other activities",
+        "upcomingEvents": "Upcoming events"
     }
 }

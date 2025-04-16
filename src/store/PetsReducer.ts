@@ -2,8 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import PetsListInterface, { petInterface } from '@appInterfaces/PetListInterface';
 
 const petsListState: PetsListInterface = {
-  pets: [],
-  loading: false
+    pets: [],
+    loading: false,
+    active: null,
 };
 
 const petsSlice = createSlice({
@@ -19,10 +20,13 @@ const petsSlice = createSlice({
     },
     startLoading: (state) => {
       state.loading = true;
+    },
+    setActivePet: (state, action: PayloadAction<string>) => {
+      state.active = action.payload;
     }
   }
 });
 
-export const { addPet, getAllPets, startLoading } = petsSlice.actions;
+export const { addPet, getAllPets, startLoading, setActivePet } = petsSlice.actions;
 
 export default petsSlice.reducer;

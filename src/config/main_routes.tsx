@@ -9,6 +9,7 @@ import App from '@appRoutes/App';
 import DashboardBase from '@appComponents/app/Dashboard/DashboardBase';
 import FallBackRoute from '@appRoutes/FallbackRoute';
 import AddPetForm from '@appComponents/app/AddPetForm';
+import MainPage from '@appComponents/app/MainPage'
 
 const MainRoutes = () => (
   <Router>
@@ -22,7 +23,7 @@ const MainRoutes = () => (
         <Route path="callback" element={<Callback />} />
       </Route>
       <Route path="app" element={<App />}>
-        <Route path="dashboard" element={<DashboardBase />} />
+        <Route path="dashboard" element={<MainPage />} />
         <Route path="add-pet" element={<AddPetForm />} />
       </Route>
     </Routes>

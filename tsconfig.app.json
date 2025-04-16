@@ -32,7 +32,8 @@
       "@appConst/*": ["const/*"],
       "@appHelpers/*": ["helpers/*"],
       "@appHooks/*": ["hooks/*"],
-      "@appRoutes/*": ["routes/*"]
+      "@appRoutes/*": ["routes/*"],
+      "@appUtils/*": ["utils/*"]
     },
     "allowSyntheticDefaultImports": true
   },

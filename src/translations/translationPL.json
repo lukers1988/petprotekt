@@ -78,18 +78,27 @@
     "common": {
         "days": "dni",
         "hours": "godzin",
-        "minutes": "minut",
         "launchingSoon": "Wkrótce startujemy",
         "greeting": "Witaj",
         "months": "miesięcy",
-        "years": " lat"
+        "years": " lat",
+        "companyName": "PetsMay",
+        "add": "Dodaj",
+        "minutes": "minut(y)",
+        "searchProduct": "Wyszukaj produkt"
     },
     "languages": {
         "pl-PL": "polski",
         "en-En": "angielski"
     },
     "sideMenu": {
-        "addPet": "Dodaj swojego Pupila"
+        "addPet": "Dodaj swojego Pupila",
+        "yourPets": "Twoje pupile",
+        "overview": "Przegląd",
+        "analytics": "Statystyki",
+        "askADoctor": "Zapytaj lekarza",
+        "settings": "Ustawienia",
+        "logOut": "Wyloguj"
     },
     "petAddition": {
         "name": "Imię",
@@ -102,5 +111,30 @@
         "dog": "Pies",
         "cat": "Kot",
         "age": "Wiek"
+    },
+    "petProfile": {
+        "petProfile": "Profil pupila",
+        "appearanceHeader": "Wygląd i cechy dystyngujące",
+        "gender": "Płeć",
+        "size": "Rozmiar",
+        "weight": "Waga",
+        "importantDates": "Ważne daty",
+        "yearsOld": "lat(a)",
+        "birthday": "urodziny",
+        "adoption": "adopcja",
+        "caretakers": "Opiekuni"
+    },
+    "recipes": {
+        "recipes": "Przepisy",
+        "addRecipes": "Dodaj nowe przepisy",
+        "foodJournal": "Dziennik żywienia",
+        "scheduledMeals": "Zaplanowane posiłki",
+        "learnNext": "Poznaj jako nastepne"
+    },
+    "activities": {
+        "walks": "Spacery",
+        "tricks": "Sztuczki",
+        "otherActivities": "Inne aktywności",
+        "upcomingEvents": "Nadchodzące wydarzenia"
     }
 }
